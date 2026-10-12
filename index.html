@@ -1,0 +1,5327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICI C'EST SÈ — La Cité Potière | Plateforme Numérique du Patrimoine de Sè, Bénin</title>
+<meta name="description" content="Vitrine numérique de Sè, Commune de Houéyogbé, Bénin. Découvrez la poterie, les artisans, la culture, les produits locaux, les lieux à visiter et les événements de la Cité Potière.">
+<meta name="keywords" content="Sè, Houéyogbé, Mono, Bénin, poterie, artisanat, culture, tourisme, ICI C'EST SÈ, Cité Potière">
+<meta name="author" content="ICI C'EST SÈ — La Cité Potière">
+<meta property="og:title" content="ICI C'EST SÈ — La Cité Potière">
+<meta property="og:description" content="Terre d'héritage, fière de sa tradition, tournée vers le développement.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ============================================================
+   ICI C'EST SÈ — LA CITÉ POTIÈRE
+   Feuille de style complète
+   ============================================================
+============================================================ */
+
+/* ============================================================
+   1. TOKENS DE DESIGN — VARIABLES CSS
+============================================================ */
+:root {
+  /* --- Palette principale --- */
+  --terre-profonde: #1a0f0a;
+  --terre-cuite: #b85c38;
+  --terre-claire: #d98963;
+  --argile: #e8c9a8;
+  --argile-claire: #f2ddc4;
+  --or: #d4af37;
+  --or-clair: #f5d76e;
+  --or-fonce: #a8841c;
+  --or-brillance: #ffe89a;
+  --rouge: #c41e3a;
+  --rouge-fonce: #8b1428;
+  --rouge-vif: #e63946;
+  --vert: #0a5c36;
+  --vert-clair: #1a8f56;
+  --vert-vif: #22b573;
+  --jaune: #f4c430;
+  --jaune-vif: #ffdb4d;
+  --creme: #fdfbf7;
+  --blanc-casse: #f5f0e6;
+  --blanc-pur: #ffffff;
+  --gris: #a8998a;
+  --gris-clair: #d1c5b5;
+  --gris-fonce: #4a3f35;
+  --noir: #0a0605;
+  --noir-soft: #14100c;
+  --noir-card: #1f1814;
+  --noir-elevated: #2a221c;
+
+  /* --- Transitions --- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-elastic: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-snappy: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --t-fast: 0.25s var(--ease-out);
+  --t-mid: 0.5s var(--ease-out);
+  --t-slow: 0.9s var(--ease-out);
+  --t-very-slow: 1.4s var(--ease-out);
+
+  /* --- Espacements --- */
+  --sp-2xs: 4px;
+  --sp-xs: 8px;
+  --sp-sm: 16px;
+  --sp-md: 24px;
+  --sp-lg: 40px;
+  --sp-xl: 64px;
+  --sp-2xl: 96px;
+  --sp-3xl: 128px;
+
+  /* --- Rayons --- */
+  --r-sm: 4px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-xl: 20px;
+  --r-full: 9999px;
+
+  /* --- Ombres --- */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 25px 60px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 40px 100px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.3);
+  --shadow-gold-lg: 0 20px 50px rgba(212, 175, 55, 0.45);
+  --shadow-terre: 0 15px 40px rgba(184, 92, 56, 0.4);
+
+  /* --- Z-index --- */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 500;
+  --z-fixed: 1000;
+  --z-modal: 5000;
+  --z-loader: 9999;
+  --z-cursor: 99999;
+}
+
+/* ============================================================
+   2. RESET & BASE
+============================================================ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--noir);
+  color: var(--blanc-casse);
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
+@media (max-width: 1024px) {
+  body { cursor: auto; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--blanc-casse);
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--t-fast);
+}
+
+img, svg, video {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+button {
+  font-family: inherit;
+  cursor: none;
+  border: none;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+@media (max-width: 1024px) {
+  button { cursor: pointer; }
+}
+
+ul, ol {
+  list-style: none;
+}
+
+::selection {
+  background: var(--or);
+  color: var(--terre-profonde);
+}
+
+::-moz-selection {
+  background: var(--or);
+  color: var(--terre-profonde);
+}
+
+/* --- Scrollbar personnalisée --- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--noir-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--or), var(--terre-cuite));
+  border-radius: 10px;
+  border: 2px solid var(--noir-soft);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--or-clair), var(--or));
+}
+
+/* ============================================================
+   3. CURSEUR PERSONNALISÉ
+============================================================ */
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: var(--z-cursor);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--or);
+  box-shadow: 0 0 12px var(--or), 0 0 24px var(--or);
+  transition: opacity 0.3s ease;
+}
+
+.cursor-ring {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(212, 175, 55, 0.6);
+  transition: width 0.35s var(--ease-out),
+              height 0.35s var(--ease-out),
+              background 0.35s ease,
+              border-color 0.35s ease;
+}
+
+.cursor-ring.hovered {
+  width: 70px;
+  height: 70px;
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--or);
+}
+
+.cursor-ring.clicked {
+  width: 30px;
+  height: 30px;
+  background: rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .cursor-dot,
+  .cursor-ring { display: none; }
+}
+
+/* ============================================================
+   4. BARRE DE PROGRESSION
+============================================================ */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--vert), var(--or), var(--rouge));
+  z-index: var(--z-fixed);
+  transition: width 0.1s linear;
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.7);
+}
+
+/* ============================================================
+   5. LOADER 3D CINÉMATOGRAPHIQUE
+============================================================ */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, #2a1a0a 0%, #0a0605 80%);
+  z-index: var(--z-loader);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s var(--ease-out), visibility 1s;
+  overflow: hidden;
+}
+
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#loaderCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.loader-stage {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  perspective: 1200px;
+}
+
+.loader-logo-wrap {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: logoSpin 4s linear infinite;
+}
+
+.loader-logo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.6))
+          drop-shadow(0 0 60px rgba(184, 92, 56, 0.4));
+}
+
+@keyframes logoSpin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+.loader-scan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--or-clair), transparent);
+  box-shadow: 0 0 20px var(--or);
+  animation: scanLine 2s ease-in-out infinite;
+}
+
+@keyframes scanLine {
+  0% { top: 0; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+.loader-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: var(--or);
+  text-transform: uppercase;
+  display: flex;
+  gap: 2px;
+  text-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+}
+
+.loader-name span {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letterIn 0.5s var(--ease-out) forwards;
+}
+
+.loader-name span:nth-child(1) { animation-delay: 0.10s; }
+.loader-name span:nth-child(2) { animation-delay: 0.15s; }
+.loader-name span:nth-child(3) { animation-delay: 0.20s; }
+.loader-name span:nth-child(4) { animation-delay: 0.25s; }
+.loader-name span:nth-child(5) { animation-delay: 0.30s; }
+.loader-name span:nth-child(6) { animation-delay: 0.35s; }
+.loader-name span:nth-child(7) { animation-delay: 0.40s; }
+.loader-name span:nth-child(8) { animation-delay: 0.45s; }
+.loader-name span:nth-child(9) { animation-delay: 0.50s; }
+.loader-name span:nth-child(10) { animation-delay: 0.55s; }
+.loader-name span:nth-child(11) { animation-delay: 0.60s; }
+.loader-name span:nth-child(12) { animation-delay: 0.65s; }
+
+@keyframes letterIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.loader-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  color: var(--terre-claire);
+  text-transform: uppercase;
+  opacity: 0;
+  animation: fadeIn 0.8s ease 0.9s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 0.7; }
+}
+
+.loader-bar {
+  width: 260px;
+  height: 3px;
+  background: rgba(212, 175, 55, 0.15);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--or), var(--or-clair), var(--or), transparent);
+  animation: loadBar 1.8s ease-in-out infinite;
+}
+
+@keyframes loadBar {
+  to { left: 100%; }
+}
+
+/* ============================================================
+   6. NAVBAR INTELLIGENTE
+============================================================ */
+nav#mainNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: var(--z-fixed);
+  transition: transform 0.5s var(--ease-out),
+              background 0.4s ease,
+              padding 0.4s ease,
+              backdrop-filter 0.4s ease;
+}
+
+nav#mainNav.hidden-nav {
+  transform: translateY(-120%);
+}
+
+nav#mainNav.scrolled {
+  background: rgba(10, 6, 5, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 12px 5vw;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.nav-brand img {
+  height: 46px;
+  width: auto;
+  filter: drop-shadow(0 0 12px rgba(212, 175, 55, 0.4));
+  transition: transform 0.4s var(--ease-out);
+}
+
+.nav-brand:hover img {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav-brand-text .brand-main {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--or);
+  letter-spacing: 0.02em;
+}
+
+.nav-brand-text .brand-sub {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.25em;
+  color: var(--terre-claire);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.nav-links > li > a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--blanc-casse);
+  position: relative;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+
+.nav-links > li > a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--or), var(--terre-cuite));
+  transition: width 0.35s var(--ease-out);
+}
+
+.nav-links > li > a:hover,
+.nav-links > li > a.active {
+  color: var(--or);
+}
+
+.nav-links > li > a:hover::after,
+.nav-links > li > a.active::after {
+  width: 100%;
+}
+
+/* Sous-menu */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(20, 16, 12, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--r-md);
+  padding: 12px 0;
+  min-width: 230px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--t-fast);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  z-index: var(--z-dropdown);
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-menu li a {
+  display: block;
+  padding: 10px 22px;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gris-clair);
+  transition: var(--t-fast);
+}
+
+.nav-dropdown-menu li a:hover {
+  color: var(--or);
+  background: rgba(212, 175, 55, 0.08);
+  padding-left: 28px;
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, var(--or), var(--or-fonce));
+  color: var(--terre-profonde);
+  border-radius: var(--r-full);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--t-fast);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.nav-wa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  z-index: 1100;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 2px;
+  background: var(--or);
+  transition: var(--t-fast);
+  transform-origin: center;
+  display: block;
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 1100px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 82%;
+    max-width: 400px;
+    height: 100vh;
+    background: linear-gradient(160deg, #1a0f0a 0%, #0a0605 100%);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 100px 40px 40px;
+    gap: 6px;
+    transition: right 0.6s var(--ease-out);
+    border-left: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: -20px 0 60px rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+  }
+  .nav-links.active { right: 0; }
+  .nav-links > li { width: 100%; }
+  .nav-links > li > a {
+    display: block;
+    padding: 14px 0;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.12);
+  }
+  .nav-dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0 0 0 20px;
+    min-width: 0;
+  }
+  .nav-dropdown-menu li a {
+    padding: 8px 0;
+    font-size: 0.72rem;
+  }
+  .nav-dropdown-menu li a:hover { padding-left: 8px; }
+  .hamburger { display: flex; }
+  .nav-wa { display: none; }
+}
+
+/* ============================================================
+   7. BOUTONS GÉNÉRIQUES 3D
+============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: var(--r-sm);
+  transition: var(--t-fast);
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  cursor: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+  .btn { cursor: pointer; }
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.6s var(--ease-out);
+}
+
+.btn:hover::before {
+  left: 150%;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--or), var(--or-fonce));
+  color: var(--terre-profonde);
+  border: 2px solid var(--or);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.55);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--blanc-casse);
+  border: 2px solid rgba(245, 240, 230, 0.3);
+}
+
+.btn-outline:hover {
+  border-color: var(--or);
+  color: var(--or);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25);
+}
+
+.btn-sm {
+  padding: 11px 22px;
+  font-size: 0.68rem;
+}
+
+.btn-lg {
+  padding: 20px 44px;
+  font-size: 0.82rem;
+}
+
+/* ============================================================
+   8. HERO 3D MULTI-COUCHES
+============================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 5vw 80px;
+  overflow: hidden;
+  perspective: 1400px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  will-change: transform;
+}
+
+.hero-bg-1 {
+  background-image: url('a.jpg');
+  filter: brightness(0.32) contrast(1.1) saturate(1.2);
+}
+
+.hero-bg-2 {
+  background:
+    radial-gradient(ellipse at 30% 40%, rgba(184, 92, 56, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(212, 175, 55, 0.2) 0%, transparent 55%),
+    linear-gradient(180deg, rgba(10, 6, 5, 0.75) 0%, rgba(10, 6, 5, 0.95) 100%);
+  z-index: 1;
+}
+
+.hero-field-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.06;
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 60px, var(--or) 60px, var(--or) 61px),
+    repeating-linear-gradient(90deg, transparent, transparent 60px, var(--or) 60px, var(--or) 61px);
+  pointer-events: none;
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 20px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--r-full);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--or-clair);
+  margin-bottom: 26px;
+  opacity: 0;
+  animation: fadeUp 1s var(--ease-out) 0.2s forwards;
+}
+
+.hero-tag .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--vert-clair);
+  box-shadow: 0 0 12px var(--vert-clair);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.5; }
+}
+
+.hero-title {
+  font-size: clamp(2.8rem, 7.5vw, 6.5rem);
+  font-weight: 900;
+  line-height: 0.92;
+  color: var(--blanc-casse);
+  margin-bottom: 18px;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease-out) 0.4s forwards;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title .line-1 {
+  display: block;
+  color: var(--blanc-casse);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.55em;
+  letter-spacing: 0.02em;
+  margin-bottom: -8px;
+}
+
+.hero-title .line-2 {
+  display: block;
+  color: var(--or);
+  text-shadow:
+    0 0 30px rgba(212, 175, 55, 0.5),
+    0 4px 0 rgba(168, 132, 28, 0.6),
+    0 8px 0 rgba(168, 132, 28, 0.4),
+    0 12px 0 rgba(168, 132, 28, 0.2),
+    0 20px 40px rgba(0, 0, 0, 0.7);
+  letter-spacing: -0.03em;
+}
+
+.hero-slogan {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  color: var(--terre-claire);
+  margin-bottom: 28px;
+  max-width: 560px;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease-out) 0.6s forwards;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  color: var(--gris);
+  line-height: 1.8;
+  margin-bottom: 36px;
+  max-width: 560px;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease-out) 0.8s forwards;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease-out) 1s forwards;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 50px;
+  padding-top: 35px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  opacity: 0;
+  animation: fadeUp 1.2s var(--ease-out) 1.2s forwards;
+}
+
+.hero-stat .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--or);
+  line-height: 1;
+}
+
+.hero-stat .lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gris);
+  margin-top: 8px;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-visual {
+  position: relative;
+  height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+  opacity: 0;
+  animation: fadeIn 1.6s var(--ease-out) 0.8s forwards;
+  will-change: transform;
+}
+
+.hero-logo-3d {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  transform-style: preserve-3d;
+  animation: floatLogo 6s ease-in-out infinite;
+}
+
+.hero-logo-3d img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 40px rgba(212, 175, 55, 0.45))
+          drop-shadow(0 20px 60px rgba(184, 92, 56, 0.35));
+}
+
+.hero-logo-3d::before {
+  content: '';
+  position: absolute;
+  inset: -8%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.18) 0%, transparent 65%);
+  z-index: -1;
+  animation: haloPulse 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0%, 100% { transform: translateY(0) rotateY(0deg); }
+  50% { transform: translateY(-20px) rotateY(8deg); }
+}
+
+@keyframes haloPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--or);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease 2s both;
+}
+
+.hero-scroll-indicator .mouse {
+  width: 26px;
+  height: 42px;
+  border: 1.5px solid var(--or);
+  border-radius: 20px;
+  position: relative;
+}
+
+.hero-scroll-indicator .mouse::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 8px;
+  background: var(--or);
+  border-radius: 3px;
+  animation: scrollDown 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+  0% { opacity: 1; top: 8px; }
+  100% { opacity: 0; top: 28px; }
+}
+
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { height: 320px; order: -1; }
+  .hero-stats { gap: 25px; flex-wrap: wrap; }
+  .hero-stat .num { font-size: 1.7rem; }
+  .hero-scroll-indicator { display: none; }
+}
+
+/* ============================================================
+   9. SÉPARATEUR JARRE (SIGNATURE)
+============================================================ */
+.jar-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 55px 5vw;
+  opacity: 0.55;
+}
+
+.jar-separator .line {
+  flex: 1;
+  max-width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+}
+
+.jar-separator svg {
+  width: 38px;
+  height: 48px;
+  animation: jarFloat 3s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes jarFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* ============================================================
+   10. SECTIONS GÉNÉRIQUES
+============================================================ */
+section {
+  position: relative;
+  padding: var(--sp-2xl) 5vw;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-head.left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--or);
+  margin-bottom: 16px;
+}
+
+.section-label::before,
+.section-label::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--or);
+  opacity: 0.6;
+}
+
+.section-head.left .section-label::before {
+  display: none;
+}
+
+.section-title {
+  font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+  color: var(--blanc-casse);
+  margin-bottom: 18px;
+}
+
+.section-title .accent {
+  color: var(--or);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.section-sub {
+  color: var(--gris);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* Reveal au scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s var(--ease-out), transform 1s var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-left.visible {
+  transform: translateX(0);
+}
+
+.reveal-right {
+  transform: translateX(60px);
+}
+
+.reveal-right.visible {
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  transform: scale(0.85);
+}
+
+.reveal-scale.visible {
+  transform: scale(1);
+}
+
+/* ============================================================
+   11. SECTION HISTOIRE / À PROPOS
+============================================================ */
+.history {
+  background: linear-gradient(180deg, var(--noir) 0%, var(--noir-soft) 100%);
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 70px;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.history-content h3 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: var(--blanc-casse);
+  margin-bottom: 20px;
+}
+
+.history-content h3 .accent {
+  color: var(--or);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.history-content p {
+  color: var(--gris);
+  font-size: 1rem;
+  line-height: 1.85;
+  margin-bottom: 18px;
+}
+
+.history-content p .highlight {
+  color: var(--or-clair);
+  font-weight: 600;
+}
+
+.history-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 32px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.fact-item .f-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--or);
+  line-height: 1;
+}
+
+.fact-item .f-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gris);
+  margin-top: 6px;
+}
+
+.history-visual {
+  position: relative;
+  perspective: 1000px;
+}
+
+.history-img-wrap {
+  position: relative;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.6s var(--ease-out);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+}
+
+.history-img-wrap img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+
+.history-img-wrap:hover img {
+  transform: scale(1.06);
+}
+
+.history-img-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, transparent 40%, rgba(10, 6, 5, 0.6) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.history-img-frame {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--or);
+  border-radius: var(--r-md);
+  z-index: -1;
+  opacity: 0.45;
+}
+
+.history-img-badge {
+  position: absolute;
+  bottom: 22px;
+  right: 22px;
+  z-index: 3;
+  background: rgba(10, 6, 5, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+}
+
+.history-img-badge .b-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--or);
+  line-height: 1;
+}
+
+.history-img-badge .b-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--terre-claire);
+  margin-top: 4px;
+}
+
+@media (max-width: 1024px) {
+  .history-grid { grid-template-columns: 1fr; gap: 50px; }
+  .history-img-wrap img { height: 420px; }
+}
+
+/* ============================================================
+   12. SECTION 3 PILIERS — CARTES FLIP 3D
+============================================================ */
+.pillars {
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(184, 92, 56, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    linear-gradient(180deg, var(--noir-soft) 0%, var(--noir) 100%);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  perspective: 1500px;
+}
+
+.flip-card {
+  position: relative;
+  height: 480px;
+  transform-style: preserve-3d;
+  transition: transform 0.9s var(--ease-out);
+  cursor: none;
+}
+
+@media (max-width: 1024px) {
+  .flip-card { cursor: pointer; }
+}
+
+.flip-card:hover {
+  transform: rotateY(180deg);
+}
+
+.flip-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 32px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  transition: border-color 0.4s;
+}
+
+.flip-front {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #14100c 100%);
+  justify-content: space-between;
+}
+
+.flip-front .pillar-icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--terre-cuite), var(--or-fonce));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--blanc-casse);
+  box-shadow: 0 8px 25px rgba(184, 92, 56, 0.4);
+}
+
+.flip-front h3 {
+  font-size: 1.7rem;
+  color: var(--blanc-casse);
+  margin-top: 20px;
+  line-height: 1.1;
+}
+
+.flip-front .p-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--or);
+  margin-bottom: 14px;
+}
+
+.flip-front .p-hint {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: var(--gris);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flip-front .p-hint::after {
+  content: '→';
+  transition: transform 0.3s;
+}
+
+.flip-back {
+  background: linear-gradient(160deg, var(--terre-profonde) 0%, #2a1a0a 100%);
+  transform: rotateY(180deg);
+  justify-content: center;
+  border-color: var(--or);
+}
+
+.flip-back p {
+  color: var(--gris);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin-bottom: 20px;
+}
+
+.flip-back ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flip-back ul li {
+  color: var(--or-clair);
+  font-size: 0.9rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.flip-back ul li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: var(--or);
+  font-size: 0.7rem;
+}
+
+@media (max-width: 1024px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+  .flip-card { height: 420px; }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   13. STATISTIQUES 3D TILT
+============================================================ */
+.stats-section {
+  background: linear-gradient(180deg, var(--noir) 0%, var(--noir-soft) 100%);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+
+.stat-card {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: var(--r-md);
+  padding: 45px 25px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.3s var(--ease-out),
+              border-color 0.3s,
+              box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vert), var(--or), var(--rouge));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.stat-card:hover::before {
+  transform: scaleX(1);
+}
+
+.stat-card:hover {
+  border-color: var(--or);
+  box-shadow: 0 25px 60px rgba(212, 175, 55, 0.2);
+}
+
+.stat-icon {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  opacity: 0.8;
+}
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--or);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+}
+
+.stat-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gris);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .stat-num { font-size: 2.2rem; }
+  .stat-card { padding: 30px 15px; }
+}
+
+/* ============================================================
+   14. TIMELINE 3D
+============================================================ */
+.timeline-section {
+  background: linear-gradient(180deg, var(--noir-soft) 0%, var(--noir) 100%);
+}
+
+.timeline {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px 0;
+  perspective: 1200px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--or) 15%, var(--or) 85%, transparent);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.tl-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 52%;
+  position: relative;
+  margin-bottom: 55px;
+  transform-style: preserve-3d;
+}
+
+.tl-item:nth-child(even) {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: 52%;
+}
+
+.tl-card {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: var(--r-md);
+  padding: 26px 30px;
+  width: 100%;
+  position: relative;
+  transition: var(--t-mid);
+  transform-style: preserve-3d;
+}
+
+.tl-card:hover {
+  border-color: var(--or);
+  transform: translateY(-6px) rotateY(-3deg);
+  box-shadow: 0 20px 45px rgba(212, 175, 55, 0.2);
+}
+
+.tl-item::after {
+  content: '';
+  position: absolute;
+  top: 32px;
+  width: 18px;
+  height: 18px;
+  background: var(--or);
+  border-radius: 50%;
+  border: 4px solid var(--noir);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.9);
+  z-index: 3;
+}
+
+.tl-item:nth-child(odd)::after {
+  right: calc(50% - 9px);
+}
+
+.tl-item:nth-child(even)::after {
+  left: calc(50% - 9px);
+}
+
+.tl-period {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--or);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tl-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--blanc-casse);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.tl-desc {
+  font-size: 0.92rem;
+  color: var(--gris);
+  line-height: 1.65;
+}
+
+@media (max-width: 800px) {
+  .timeline::before { left: 18px; }
+  .tl-item,
+  .tl-item:nth-child(even) {
+    padding-left: 50px;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+  .tl-item::after,
+  .tl-item:nth-child(odd)::after,
+  .tl-item:nth-child(even)::after {
+    left: 10px;
+    right: auto;
+  }
+  .tl-card { padding: 22px 20px; }
+}
+
+/* ============================================================
+   15. DOMAINES D'ACTIVITÉS — 6 CARTES TILT 3D
+============================================================ */
+.domains {
+  background: linear-gradient(180deg, var(--noir) 0%, var(--terre-profonde) 100%);
+}
+
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1300px;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+
+.domain-card {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: var(--r-md);
+  padding: 38px 30px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s var(--ease-out),
+              border-color 0.3s,
+              box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.domain-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent 40%, rgba(212, 175, 55, 0.08) 100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.domain-card:hover {
+  border-color: var(--or);
+  box-shadow: 0 25px 55px rgba(212, 175, 55, 0.22);
+}
+
+.domain-card:hover::after {
+  opacity: 1;
+}
+
+.d-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(135deg, var(--terre-cuite), var(--or-fonce));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 22px rgba(184, 92, 56, 0.4);
+  transform: translateZ(30px);
+}
+
+.domain-card h3 {
+  font-size: 1.3rem;
+  color: var(--blanc-casse);
+  margin-bottom: 12px;
+  transform: translateZ(20px);
+}
+
+.domain-card p {
+  color: var(--gris);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  transform: translateZ(10px);
+}
+
+@media (max-width: 1024px) {
+  .domains-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .domains-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   16. ARTISANS — ANNUAIRE AVEC FILTRES + WHATSAPP
+============================================================ */
+.artisans {
+  background: linear-gradient(180deg, var(--noir-soft) 0%, var(--noir) 100%);
+}
+
+.artisans-filter {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--r-full);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gris-clair);
+  transition: var(--t-fast);
+  cursor: none;
+}
+
+@media (max-width: 1024px) {
+  .filter-btn { cursor: pointer; }
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--or);
+  color: var(--terre-profonde);
+  border-color: var(--or);
+  transform: translateY(-2px);
+}
+
+.artisans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 1300px;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+
+.artisan-card {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition: var(--t-mid);
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+}
+
+.artisan-card:hover {
+  border-color: var(--or);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(212, 175, 55, 0.2);
+}
+
+.artisan-photo {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+}
+
+.artisan-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out);
+}
+
+.artisan-card:hover .artisan-photo img {
+  transform: scale(1.08);
+}
+
+.artisan-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 6, 5, 0.9) 0%, transparent 50%);
+}
+
+.artisan-specialty {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+  padding: 6px 14px;
+  background: rgba(212, 175, 55, 0.95);
+  color: var(--terre-profonde);
+  border-radius: var(--r-full);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.artisan-body {
+  padding: 24px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.artisan-body h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: var(--blanc-casse);
+  margin-bottom: 8px;
+}
+
+.artisan-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--terre-claire);
+  margin-bottom: 14px;
+}
+
+.artisan-body p {
+  color: var(--gris);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.artisan-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.artisan-wa {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  border-radius: var(--r-full);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  transition: var(--t-fast);
+  text-transform: uppercase;
+}
+
+.artisan-wa:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.artisan-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--or);
+  transition: var(--t-fast);
+  font-size: 1rem;
+}
+
+.artisan-more:hover {
+  background: var(--or);
+  color: var(--terre-profonde);
+  transform: rotate(-15deg) scale(1.08);
+}
+
+@media (max-width: 1024px) {
+  .artisans-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .artisans-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   17. POTERIE / SAVOIR-FAIRE (PROCESSUS)
+============================================================ */
+.pottery {
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(184, 92, 56, 0.15) 0%, transparent 55%),
+    linear-gradient(180deg, var(--noir) 0%, var(--terre-profonde) 100%);
+}
+
+.pottery-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.step-card {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: var(--r-lg);
+  padding: 32px 24px;
+  position: relative;
+  transition: var(--t-mid);
+  transform-style: preserve-3d;
+}
+
+.step-card:hover {
+  border-color: var(--or);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.18);
+}
+
+.step-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(212, 175, 55, 0.2);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.step-icon {
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.step-card h3 {
+  font-size: 1.1rem;
+  color: var(--or-clair);
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 0.88rem;
+  color: var(--gris);
+  line-height: 1.65;
+}
+
+@media (max-width: 1024px) {
+  .pottery-steps { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 500px) {
+  .pottery-steps { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   18. PRODUITS LOCAUX
+============================================================ */
+.products {
+  background: linear-gradient(180deg, var(--terre-profonde) 0%, var(--noir) 100%);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: var(--r-lg);
+  padding: 30px 22px;
+  text-align: center;
+  transition: var(--t-mid);
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vert), var(--or), var(--rouge));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-out);
+}
+
+.product-card:hover::before {
+  transform: scaleX(1);
+}
+
+.product-card:hover {
+  border-color: var(--or);
+  transform: translateY(-6px);
+}
+
+.product-icon {
+  font-size: 2.4rem;
+  margin-bottom: 16px;
+}
+
+.product-card h3 {
+  font-size: 1rem;
+  color: var(--or-clair);
+  margin-bottom: 8px;
+}
+
+.product-card p {
+  font-size: 0.82rem;
+  color: var(--gris);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .products-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 500px) {
+  .products-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   19. LIEUX À DÉCOUVRIR
+============================================================ */
+.places {
+  background: linear-gradient(180deg, var(--noir) 0%, var(--noir-soft) 100%);
+}
+
+.places-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.place-card {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  height: 400px;
+  cursor: none;
+  transition: var(--t-mid);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+@media (max-width: 1024px) {
+  .place-card { cursor: pointer; }
+}
+
+.place-card:hover {
+  border-color: var(--or);
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.place-img {
+  position: absolute;
+  inset: 0;
+}
+
+.place-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+
+.place-card:hover .place-img img {
+  transform: scale(1.1);
+}
+
+.place-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top,
+    rgba(10, 6, 5, 0.95) 0%,
+    rgba(10, 6, 5, 0.3) 50%,
+    transparent 100%);
+}
+
+.place-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 24px;
+  z-index: 2;
+}
+
+.place-category {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(212, 175, 55, 0.95);
+  color: var(--terre-profonde);
+  border-radius: var(--r-full);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.place-body h3 {
+  font-size: 1.4rem;
+  color: var(--blanc-casse);
+  margin-bottom: 8px;
+}
+
+.place-body p {
+  font-size: 0.88rem;
+  color: var(--gris-clair);
+  line-height: 1.6;
+}
+
+.place-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--or);
+}
+
+.place-link::after {
+  content: '→';
+  transition: transform 0.3s;
+}
+
+.place-card:hover .place-link::after {
+  transform: translateX(6px);
+}
+
+@media (max-width: 1024px) {
+  .places-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .places-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   20. ÉVÉNEMENTS
+============================================================ */
+.events {
+  background: linear-gradient(180deg, var(--noir-soft) 0%, var(--noir) 100%);
+}
+
+.events-list {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.event-item {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 30px;
+  align-items: center;
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: var(--r-lg);
+  padding: 26px 30px;
+  transition: var(--t-mid);
+}
+
+.event-item:hover {
+  border-color: var(--or);
+  transform: translateX(8px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15);
+}
+
+.event-date {
+  text-align: center;
+  padding: 12px;
+  background: rgba(212, 175, 55, 0.08);
+  border-radius: var(--r-md);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.event-date .e-day {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--or);
+  line-height: 1;
+}
+
+.event-date .e-month {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gris);
+  margin-top: 4px;
+}
+
+.event-content h3 {
+  font-size: 1.2rem;
+  color: var(--blanc-casse);
+  margin-bottom: 8px;
+}
+
+.event-content p {
+  font-size: 0.9rem;
+  color: var(--gris);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.event-meta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--terre-claire);
+}
+
+.event-cta {
+  padding: 12px 22px;
+  background: transparent;
+  border: 2px solid var(--or);
+  color: var(--or);
+  border-radius: var(--r-full);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: var(--t-fast);
+  cursor: none;
+}
+
+@media (max-width: 1024px) {
+  .event-cta { cursor: pointer; }
+}
+
+.event-cta:hover {
+  background: var(--or);
+  color: var(--terre-profonde);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+  .event-item {
+    grid-template-columns: 80px 1fr;
+    gap: 18px;
+    padding: 20px;
+  }
+  .event-cta {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+/* ============================================================
+   21. ACTUALITÉS
+============================================================ */
+.news {
+  background: linear-gradient(180deg, var(--noir) 0%, var(--terre-profonde) 100%);
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.news-card {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  transition: var(--t-mid);
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card:hover {
+  border-color: var(--or);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.news-card.featured {
+  grid-row: span 2;
+}
+
+.news-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+.news-card.featured .news-img {
+  height: 340px;
+}
+
+.news-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s var(--ease-out);
+}
+
+.news-card:hover .news-img img {
+  transform: scale(1.08);
+}
+
+.news-body {
+  padding: 24px 22px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: var(--r-full);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--or-clair);
+  margin-bottom: 12px;
+  align-self: flex-start;
+}
+
+.news-body h3 {
+  font-size: 1.1rem;
+  color: var(--blanc-casse);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.news-card.featured .news-body h3 {
+  font-size: 1.5rem;
+}
+
+.news-body p {
+  font-size: 0.88rem;
+  color: var(--gris);
+  line-height: 1.65;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+.news-date {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--terre-claire);
+}
+
+@media (max-width: 1024px) {
+  .news-grid { grid-template-columns: 1fr 1fr; }
+  .news-card.featured {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+  .news-card.featured .news-img { height: 260px; }
+}
+
+@media (max-width: 640px) {
+  .news-grid { grid-template-columns: 1fr; }
+  .news-card.featured { grid-column: span 1; }
+}
+
+/* ============================================================
+   22. GALERIE PHOTOS/VIDÉOS
+============================================================ */
+.gallery {
+  background: linear-gradient(180deg, var(--terre-profonde) 0%, var(--noir) 100%);
+  overflow: hidden;
+}
+
+.gallery-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.gallery-tab {
+  padding: 11px 24px;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--r-full);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gris-clair);
+  transition: var(--t-fast);
+  cursor: none;
+}
+
+@media (max-width: 1024px) {
+  .gallery-tab { cursor: pointer; }
+}
+
+.gallery-tab:hover,
+.gallery-tab.active {
+  background: var(--or);
+  color: var(--terre-profonde);
+  border-color: var(--or);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  cursor: none;
+  aspect-ratio: 3/4;
+  transition: var(--t-mid);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .gallery-item { cursor: pointer; }
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  border-color: var(--or);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease-out), filter 0.5s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.85);
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 6, 5, 0.9) 0%, transparent 55%);
+  opacity: 0;
+  transition: var(--t-mid);
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+.gallery-item .g-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 2;
+  transform: translateY(15px);
+  opacity: 0;
+  transition: var(--t-mid);
+}
+
+.gallery-item:hover .g-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.g-info .g-cat {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--or);
+  margin-bottom: 6px;
+}
+
+.g-info .g-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: var(--blanc-casse);
+}
+
+.gallery-item.video .video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: var(--terre-profonde);
+  z-index: 3;
+  transition: var(--t-mid);
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5);
+}
+
+.gallery-item.video:hover .video-play {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+@media (max-width: 1024px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 500px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   23. CITATION IMMERSIVE
+============================================================ */
+.quote-section {
+  position: relative;
+  padding: 140px 5vw;
+  text-align: center;
+  background-image: url('b.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.quote-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 6, 5, 0.94) 0%, rgba(26, 15, 10, 0.92) 100%);
+}
+
+.quote-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 5.5rem;
+  color: var(--or);
+  line-height: 0.4;
+  opacity: 0.4;
+  margin-bottom: 20px;
+}
+
+.quote-text {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.8vw, 2.2rem);
+  font-weight: 400;
+  color: var(--blanc-casse);
+  line-height: 1.45;
+  margin-bottom: 28px;
+}
+
+.quote-author {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--or);
+}
+
+@media (max-width: 768px) {
+  .quote-section {
+    background-attachment: scroll;
+    padding: 90px 5vw;
+  }
+}
+
+/* ============================================================
+   24. MODÈLE ÉCONOMIQUE
+============================================================ */
+.economy {
+  background: linear-gradient(180deg, var(--noir-soft) 0%, var(--noir) 100%);
+}
+
+.economy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  max-width: 1300px;
+  margin: 0 auto;
+  perspective: 1000px;
+}
+
+.eco-card {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: var(--r-md);
+  padding: 32px 22px;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.3s var(--ease-out),
+              border-color 0.3s,
+              box-shadow 0.3s;
+}
+
+.eco-card:hover {
+  border-color: var(--or);
+  box-shadow: 0 20px 50px rgba(212, 175, 55, 0.18);
+}
+
+.eco-icon {
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+  display: block;
+  transform: translateZ(25px);
+}
+
+.eco-card h3 {
+  font-size: 1.05rem;
+  color: var(--or-clair);
+  margin-bottom: 10px;
+  transform: translateZ(15px);
+}
+
+.eco-card p {
+  font-size: 0.85rem;
+  color: var(--gris);
+  line-height: 1.6;
+  transform: translateZ(8px);
+}
+
+@media (max-width: 1024px) {
+  .economy-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 500px) {
+  .economy-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   25. PARTENAIRES & IMPACT
+============================================================ */
+.partners {
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(10, 92, 54, 0.15) 0%, transparent 50%),
+    linear-gradient(180deg, var(--noir) 0%, var(--terre-profonde) 100%);
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: var(--r-lg);
+  padding: 45px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--vert), var(--or), var(--rouge));
+}
+
+.panel h3 {
+  font-size: 1.5rem;
+  color: var(--blanc-casse);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.panel h3 .p-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(135deg, var(--terre-cuite), var(--or-fonce));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.panel ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panel ul li {
+  padding-left: 26px;
+  position: relative;
+  color: var(--gris);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.panel ul li::before {
+  content: '◆';
+  position: absolute;
+  left: 0;
+  color: var(--or);
+  font-size: 0.7rem;
+  top: 6px;
+}
+
+@media (max-width: 900px) {
+  .partners-grid { grid-template-columns: 1fr; gap: 26px; }
+  .panel { padding: 32px 26px; }
+}
+
+/* ============================================================
+   26. CONTACT PREMIUM
+============================================================ */
+.contact {
+  background:
+    radial-gradient(ellipse at 50% 100%, rgba(212, 175, 55, 0.12) 0%, transparent 60%),
+    linear-gradient(180deg, var(--terre-profonde) 0%, var(--noir) 100%);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: linear-gradient(160deg, var(--noir-card) 0%, #0f0a06 100%);
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: var(--r-lg);
+  padding: 42px 38px;
+  transition: var(--t-mid);
+}
+
+.contact-card:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.contact-card h3 {
+  font-size: 1.35rem;
+  color: var(--blanc-casse);
+  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact-card h3 .c-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(135deg, var(--terre-cuite), var(--or-fonce));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+
+.contact-item {
+  display: flex;
+  gap: 16px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.contact-item:last-of-type {
+  border-bottom: none;
+}
+
+.contact-item .ci-icon {
+  color: var(--or);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.contact-item .ci-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gris);
+  margin-bottom: 5px;
+}
+
+.contact-item .ci-val {
+  color: var(--blanc-casse);
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.contact-item .ci-val a {
+  color: var(--or-clair);
+}
+
+.contact-item .ci-val a:hover {
+  color: var(--or);
+  text-decoration: underline;
+}
+
+.wa-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  border-radius: var(--r-full);
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  transition: var(--t-fast);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+  cursor: none;
+}
+
+@media (max-width: 1024px) {
+  .wa-cta { cursor: pointer; }
+}
+
+.wa-cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.55);
+}
+
+.socials-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.socials-row a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--or);
+  font-size: 1.05rem;
+  transition: var(--t-fast);
+}
+
+.socials-row a:hover {
+  background: var(--or);
+  color: var(--terre-profonde);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-card { padding: 30px 24px; }
+}
+
+/* ============================================================
+   27. FOOTER
+============================================================ */
+footer {
+  background: linear-gradient(180deg, var(--terre-profonde) 0%, #050302 100%);
+  padding: 65px 5vw 28px;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--or), transparent);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto 45px;
+}
+
+.footer-brand img {
+  height: 65px;
+  width: auto;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+}
+
+.footer-brand h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--or);
+  margin-bottom: 6px;
+}
+
+.footer-brand .tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--terre-claire);
+  margin-bottom: 16px;
+}
+
+.footer-brand p {
+  color: var(--gris);
+  font-size: 0.86rem;
+  line-height: 1.7;
+  max-width: 340px;
+}
+
+.footer-col h4 {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--or);
+  margin-bottom: 20px;
+}
+
+.footer-col ul li {
+  margin-bottom: 11px;
+}
+
+.footer-col ul li a {
+  color: var(--gris);
+  font-size: 0.88rem;
+  display: inline-block;
+}
+
+.footer-col ul li a:hover {
+  color: var(--or-clair);
+  transform: translateX(4px);
+}
+
+.footer-bottom {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom p {
+  color: var(--gris);
+  font-size: 0.8rem;
+}
+
+.footer-bottom p .or {
+  color: var(--or);
+}
+
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+/* ============================================================
+   28. BOUTON SCROLL TO TOP
+============================================================ */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--or), var(--or-fonce));
+  color: var(--terre-profonde);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  z-index: var(--z-sticky);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px) scale(0.8);
+  transition: var(--t-mid);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+  cursor: none;
+}
+
+@media (max-width: 1024px) {
+  .scroll-top { cursor: pointer; }
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.scroll-top:hover {
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 18px 45px rgba(212, 175, 55, 0.6);
+}
+
+@media (max-width: 640px) {
+  .scroll-top {
+    width: 44px;
+    height: 44px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* ============================================================
+   29. STATS BAND (BANDE STATISTIQUES)
+============================================================ */
+.stats-band {
+  background: linear-gradient(135deg, var(--terre-profonde) 0%, var(--noir) 100%);
+  padding: 70px 5vw;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat-block .s-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: var(--or);
+  line-height: 1;
+}
+
+.stat-block .s-lbl {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gris);
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  .stats-row { grid-template-columns: 1fr 1fr; gap: 20px; }
+}
+
+/* ============================================================
+   30. ACCESSIBILITÉ & PRÉFÉRENCES
+============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body { background: white; color: black; }
+  nav, footer, .cursor-dot, .cursor-ring, .scroll-progress, .scroll-top, #loader { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     CURSEUR PERSONNALISÉ
+============================================================ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============================================================
+     BARRE DE PROGRESSION
+============================================================ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============================================================
+     LOADER 3D CINÉMATOGRAPHIQUE
+============================================================ -->
+<div id="loader">
+  <canvas id="loaderCanvas"></canvas>
+  <div class="loader-stage">
+    <div class="loader-logo-wrap">
+      <img src="logo.jpg" alt="Logo ICI C'EST SÈ — La Cité Potière">
+      <div class="loader-scan"></div>
+    </div>
+    <div class="loader-name">
+      <span>I</span><span>C</span><span>I</span><span>&nbsp;</span><span>C</span><span>'</span><span>E</span><span>S</span><span>T</span><span>&nbsp;</span><span>S</span><span>È</span>
+    </div>
+    <div class="loader-sub">La Cité Potière</div>
+    <div class="loader-bar"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-brand">
+    <img src="logo.jpg" alt="Logo ICI C'EST SÈ">
+    <div class="nav-brand-text">
+      <span class="brand-main">ICI C'EST SÈ</span>
+      <span class="brand-sub">La Cité Potière</span>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero" class="nav-link">Accueil</a></li>
+    <li><a href="#histoire" class="nav-link">Notre histoire</a></li>
+    <li class="nav-dropdown">
+      <a href="#artisans" class="nav-link">Artisans ▾</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="#artisans">Annuaire des artisans</a></li>
+        <li><a href="#poterie">Savoir-faire potier</a></li>
+        <li><a href="#produits">Produits locaux</a></li>
+      </ul>
+    </li>
+    <li class="nav-dropdown">
+      <a href="#lieux" class="nav-link">Découvrir ▾</a>
+      <ul class="nav-dropdown-menu">
+        <li><a href="#lieux">Lieux à visiter</a></li>
+        <li><a href="#evenements">Événements</a></li>
+        <li><a href="#actualites">Actualités</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+      </ul>
+    </li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="https://wa.me/22960000000" target="_blank" class="nav-wa">💬 WhatsApp</a>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO 3D MULTI-COUCHES
+============================================================ -->
+<section class="hero" id="hero">
+  <div class="hero-bg hero-bg-1" id="heroBg1"></div>
+  <div class="hero-bg hero-bg-2"></div>
+  <div class="hero-field-lines"></div>
+  <canvas class="hero-particles" id="heroParticles"></canvas>
+
+  <div class="hero-grid">
+    <div class="hero-content" id="heroContent">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        Sè · Houéyogbé · Mono · Bénin
+      </div>
+      <h1 class="hero-title">
+        <span class="line-1">ICI C'EST</span>
+        <span class="line-2">SÈ</span>
+      </h1>
+      <p class="hero-slogan">
+        « Terre d'héritage, fière de sa tradition, tournée vers le développement. »
+      </p>
+      <p class="hero-desc">
+        La vitrine numérique de Sè — La Cité Potière. Découvrez notre patrimoine,
+        nos artisans, notre culture, nos produits locaux et nos événements.
+        Un voyage au cœur de la richesse béninoise.
+      </p>
+      <div class="hero-cta">
+        <a href="#artisans" class="btn btn-primary">Découvrir les artisans →</a>
+        <a href="#histoire" class="btn btn-outline">Notre histoire</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num" data-target="100">0</div>
+          <div class="lbl">Artisans référencés</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num" data-target="50000">0</div>
+          <div class="lbl">Abonnés visés</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num" data-target="20">0</div>
+          <div class="lbl">Partenaires</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" id="heroVisual">
+      <div class="hero-logo-3d">
+        <img src="logo.jpg" alt="Logo ICI C'EST SÈ — La Cité Potière">
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-indicator">
+    <span>Scroll</span>
+    <div class="mouse"></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SÉPARATEUR JARRE
+============================================================ -->
+<div class="jar-separator">
+  <span class="line"></span>
+  <svg viewBox="0 0 40 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M8 4 Q4 6 5 12 L7 26 Q2 30 3 38 Q4 46 12 47 L28 47 Q36 46 37 38 Q38 30 33 26 L35 12 Q36 6 32 4 L28 6 Q26 3 20 3 Q14 3 12 6 Z"
+          stroke="#d4af37" stroke-width="1.5" fill="none"/>
+    <ellipse cx="20" cy="14" rx="11" ry="2" stroke="#d4af37" stroke-width="1" fill="none" opacity="0.5"/>
+  </svg>
+  <span class="line"></span>
+</div>
+
+<!-- ============================================================
+     SECTION HISTOIRE / À PROPOS
+============================================================ -->
+<section class="history" id="histoire">
+  <div class="section-head reveal">
+    <div class="section-label">Notre histoire</div>
+    <h2 class="section-title">Sè, terre <span class="accent">d'héritage</span> et de tradition</h2>
+    <p class="section-sub">
+      Un patrimoine millénaire, une communauté vivante, un savoir-faire transmis
+      de génération en génération au cœur du département du Mono.
+    </p>
+  </div>
+
+  <div class="history-grid">
+    <div class="history-content reveal-left reveal">
+      <h3>La <span class="accent">Cité Potière</span> du Bénin</h3>
+      <p>
+        <span class="highlight">Sè</span>, située dans la commune de Houéyogbé, au cœur
+        du département du Mono, est une terre d'histoire, de culture et de tradition.
+        Connue comme la <span class="highlight">Cité Potière</span>, elle perpétue depuis
+        des siècles un savoir-faire artisanal unique autour de l'argile et de la poterie.
+      </p>
+      <p>
+        Les femmes de Sè, gardiennes de ce patrimoine, façonnent à la main des jarres,
+        canaris, marmites et objets décoratifs qui racontent l'histoire et l'identité
+        de tout un peuple. Chaque pièce est unique, porteuse de sens et de mémoire.
+      </p>
+      <p>
+        Mais Sè, c'est aussi une <span class="highlight">communauté vivante</span> :
+        des artisans, des agriculteurs, des commerçants, des artistes, des jeunes pleins
+        d'ambition et une diaspora attachée à ses racines. C'est cette richesse humaine
+        et culturelle que la marque <span class="highlight">ICI C'EST SÈ</span> met en lumière.
+      </p>
+      <div class="history-facts">
+        <div class="fact-item">
+          <div class="f-num">Mono</div>
+          <div class="f-lbl">Département</div>
+        </div>
+        <div class="fact-item">
+          <div class="f-num">Houéyogbé</div>
+          <div class="f-lbl">Commune</div>
+        </div>
+        <div class="fact-item">
+          <div class="f-num">Poterie</div>
+          <div class="f-lbl">Savoir-faire ancestral</div>
+        </div>
+        <div class="fact-item">
+          <div class="f-num">Bénin</div>
+          <div class="f-lbl">République</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="history-visual reveal-right reveal">
+      <div class="history-img-wrap">
+        <img src="c.jpg" alt="Patrimoine culturel de Sè">
+        <div class="history-img-badge">
+          <div class="b-num">Cité</div>
+          <div class="b-lbl">Potière du Bénin</div>
+        </div>
+      </div>
+      <div class="history-img-frame"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION 3 PILIERS
+============================================================ -->
+<section class="pillars" id="piliers">
+  <div class="section-head reveal">
+    <div class="section-label">Positionnement</div>
+    <h2 class="section-title">Trois <span class="accent">piliers</span> stratégiques</h2>
+    <p class="section-sub">
+      Une combinaison unique pour construire un modèle économique diversifié,
+      résilient et durable au service de tout un territoire.
+    </p>
+  </div>
+
+  <div class="pillars-grid">
+    <div class="flip-card reveal">
+      <div class="flip-face flip-front">
+        <div>
+          <div class="pillar-icon">📖</div>
+          <div class="p-num">01 / Raconter</div>
+          <h3>Raconter Sè</h3>
+        </div>
+        <div class="p-hint">Voir le détail</div>
+      </div>
+      <div class="flip-face flip-back">
+        <p>
+          Produire et diffuser des histoires, images, portraits, reportages et
+          actualités qui construisent l'identité de la destination Sè.
+        </p>
+        <ul>
+          <li>Reportages villages</li>
+          <li>Portraits d'artisans</li>
+          <li>Actualités locales</li>
+          <li>Contenus numériques</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flip-card reveal">
+      <div class="flip-face flip-front">
+        <div>
+          <div class="pillar-icon">🤝</div>
+          <div class="p-num">02 / Vendre</div>
+          <h3>Vendre & Valoriser</h3>
+        </div>
+        <div class="p-hint">Voir le détail</div>
+      </div>
+      <div class="flip-face flip-back">
+        <p>
+          Mettre en relation artisans, entrepreneurs, producteurs et clients
+          autour des produits et services de Sè.
+        </p>
+        <ul>
+          <li>Plateforme numérique</li>
+          <li>Boutique physique</li>
+          <li>Produits dérivés</li>
+          <li>Commission artisanat</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flip-card reveal">
+      <div class="flip-face flip-front">
+        <div>
+          <div class="pillar-icon">🧭</div>
+          <div class="p-num">03 / Découvrir</div>
+          <h3>Faire découvrir Sè</h3>
+        </div>
+        <div class="p-hint">Voir le détail</div>
+      </div>
+      <div class="flip-face flip-back">
+        <p>
+          Promouvoir les villages, sites, traditions, expériences et événements
+          afin de stimuler le tourisme local et régional.
+        </p>
+        <ul>
+          <li>Circuits touristiques</li>
+          <li>Guides & supports</li>
+          <li>Événements culturels</li>
+          <li>Promotion territoriale</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS BAND
+============================================================ -->
+<section class="stats-band">
+  <div class="stats-row">
+    <div class="stat-block reveal">
+      <div class="s-num" data-target="100">0</div>
+      <div class="s-lbl">Artisans & acteurs locaux</div>
+    </div>
+    <div class="stat-block reveal">
+      <div class="s-num" data-target="50000">0</div>
+      <div class="s-lbl">Abonnés cumulés visés</div>
+    </div>
+    <div class="stat-block reveal">
+      <div class="s-num" data-target="20">0</div>
+      <div class="s-lbl">Partenaires commerciaux</div>
+    </div>
+    <div class="stat-block reveal">
+      <div class="s-num" data-target="10">0</div>
+      <div class="s-lbl">Événements majeurs / an</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION STATISTIQUES 3D
+============================================================ -->
+<section class="stats-section">
+  <div class="section-head reveal">
+    <div class="section-label">Objectifs à 3 ans</div>
+    <h2 class="section-title">Des <span class="accent">chiffres</span> ambitieux mais réalistes</h2>
+    <p class="section-sub">
+      Notre vision pour faire de Sè une marque territoriale de référence au Bénin
+      et en Afrique de l'Ouest.
+    </p>
+  </div>
+
+  <div class="stats-grid" id="statsGrid">
+    <div class="stat-card reveal">
+      <div class="stat-icon">👥</div>
+      <div class="stat-num" data-target="50000">0</div>
+      <div class="stat-lbl">Abonnés cumulés</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-icon">🏺</div>
+      <div class="stat-num" data-target="100">0</div>
+      <div class="stat-lbl">Artisans référencés</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-icon">🤝</div>
+      <div class="stat-num" data-target="20">0</div>
+      <div class="stat-lbl">Partenaires commerciaux</div>
+    </div>
+    <div class="stat-card reveal">
+      <div class="stat-icon">🎭</div>
+      <div class="stat-num" data-target="10">0</div>
+      <div class="stat-lbl">Événements majeurs / an</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TIMELINE 3D
+============================================================ -->
+<section class="timeline-section" id="timeline">
+  <div class="section-head reveal">
+    <div class="section-label">Feuille de route</div>
+    <h2 class="section-title">Lancement sur <span class="accent">12 mois</span></h2>
+    <p class="section-sub">
+      Une progression structurée, du juridique à l'événementiel, pour bâtir une
+      marque solide et durable au service de tout un territoire.
+    </p>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-card">
+        <div class="tl-period">Mois 1 – 2</div>
+        <div class="tl-title">Formalisation & Antériorité</div>
+        <p class="tl-desc">
+          Création de l'entreprise via APIEx / MonEntreprise.bj. Recherche
+          d'antériorité et préparation du dossier de marque auprès de l'OAPI.
+        </p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-card">
+        <div class="tl-period">Mois 3 – 4</div>
+        <div class="tl-title">Identité visuelle & Digital</div>
+        <p class="tl-desc">
+          Finalisation du logo, charte graphique, site internet, réseaux sociaux
+          professionnels et catalogue de prestations.
+        </p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-card">
+        <div class="tl-period">Mois 5 – 6</div>
+        <div class="tl-title">Recensement & Reportages</div>
+        <p class="tl-desc">
+          Recensement des artisans, portraits, reportages immersifs dans les
+          villages et sites emblématiques de Sè.
+        </p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-card">
+        <div class="tl-period">Mois 7 – 9</div>
+        <div class="tl-title">Commercialisation & Boutique</div>
+        <p class="tl-desc">
+          Lancement commercial, ouverture de la boutique physique et numérique,
+          publicité et premiers partenariats stratégiques.
+        </p>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-card">
+        <div class="tl-period">Mois 10 – 12</div>
+        <div class="tl-title">Événement annuel & Extension</div>
+        <p class="tl-desc">
+          Organisation du premier grand événement annuel, mobilisation des
+          sponsors, développement touristique et extension à la Commune de Houéyogbé.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DOMAINES D'ACTIVITÉS
+============================================================ -->
+<section class="domains">
+  <div class="section-head reveal">
+    <div class="section-label">Domaines d'activités</div>
+    <h2 class="section-title">Six <span class="accent">pôles</span> complémentaires</h2>
+    <p class="section-sub">
+      Une diversification stratégique pour limiter la dépendance à une seule
+      source de revenus et assurer la pérennité de la marque.
+    </p>
+  </div>
+
+  <div class="domains-grid">
+    <div class="domain-card reveal">
+      <div class="d-icon">📡</div>
+      <h3>Communication & Média</h3>
+      <p>
+        Gestion réseaux sociaux, création de contenus, photographie,
+        vidéographie, reportages, interviews, publicité et community management.
+      </p>
+    </div>
+    <div class="domain-card reveal">
+      <div class="d-icon">🏛️</div>
+      <h3>Culture & Tourisme</h3>
+      <p>
+        Promotion des villages et sites, circuits touristiques, contenus de
+        découverte, guides et promotion événementielle.
+      </p>
+    </div>
+    <div class="domain-card reveal">
+      <div class="d-icon">🏺</div>
+      <h3>Artisanat & Poterie</h3>
+      <p>
+        Promotion des potiers, commercialisation des produits artisanaux,
+        vitrine numérique, poteries et collections ICI C'EST SÈ.
+      </p>
+    </div>
+    <div class="domain-card reveal">
+      <div class="d-icon">👕</div>
+      <h3>Produits Dérivés</h3>
+      <p>
+        Polos, T-shirts, casquettes, sacs, bracelets, porte-clés, mugs,
+        tableaux, objets décoratifs, souvenirs et accessoires.
+      </p>
+    </div>
+    <div class="domain-card reveal">
+      <div class="d-icon">🎭</div>
+      <h3>Événementiel</h3>
+      <p>
+        Festivals, journées culturelles, expositions, foires artisanales,
+        rencontres communautaires, activités sportives, concerts et spectacles.
+      </p>
+    </div>
+    <div class="domain-card reveal">
+      <div class="d-icon">🎓</div>
+      <h3>Formation & Entrepreneuriat</h3>
+      <p>
+        Communication digitale, community management, entrepreneuriat,
+        artisanat, marketing, photographie et valorisation des produits locaux.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ARTISANS — ANNUAIRE AVEC FILTRES + WHATSAPP
+============================================================ -->
+<section class="artisans" id="artisans">
+  <div class="section-head reveal">
+    <div class="section-label">Annuaire des artisans</div>
+    <h2 class="section-title">Rencontrez les <span class="accent">artisans</span> de Sè</h2>
+    <p class="section-sub">
+      Découvrez les femmes et les hommes qui font vivre le savoir-faire de la
+      Cité Potière. Contactez-les directement par WhatsApp.
+    </p>
+  </div>
+
+  <div class="artisans-filter reveal">
+    <button class="filter-btn active" data-filter="all">Tous</button>
+    <button class="filter-btn" data-filter="poterie">Poterie</button>
+    <button class="filter-btn" data-filter="tissage">Tissage</button>
+    <button class="filter-btn" data-filter="sculpture">Sculpture</button>
+    <button class="filter-btn" data-filter="bijoux">Bijoux</button>
+    <button class="filter-btn" data-filter="cuisine">Cuisine locale</button>
+  </div>
+
+  <div class="artisans-grid" id="artisansGrid">
+    <article class="artisan-card reveal" data-category="poterie">
+      <div class="artisan-photo">
+        <img src="a.jpg" alt="Mama Adjovi, potière à Sè">
+        <span class="artisan-specialty">Poterie</span>
+      </div>
+      <div class="artisan-body">
+        <h3>Mama Adjovi</h3>
+        <div class="artisan-location">📍 Sè Centre</div>
+        <p>
+          Maître potière depuis plus de 30 ans. Spécialiste des jarres
+          traditionnelles et canaris cérémoniels en argile naturelle.
+        </p>
+        <div class="artisan-actions">
+          <a href="https://wa.me/22960000001?text=Bonjour%20Mama%20Adjovi" target="_blank" class="artisan-wa">
+            💬 WhatsApp
+          </a>
+          <a href="#" class="artisan-more" title="Voir le profil">→</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="artisan-card reveal" data-category="poterie">
+      <div class="artisan-photo">
+        <img src="b.jpg" alt="Papa Dossou, maître potier">
+        <span class="artisan-specialty">Poterie</span>
+      </div>
+      <div class="artisan-body">
+        <h3>Papa Dossou</h3>
+        <div class="artisan-location">📍 Quartier Zounhoué</div>
+        <p>
+          Artisan sculpteur-potier, créateur de pièces décoratives modernes
+          mêlant tradition et design contemporain.
+        </p>
+        <div class="artisan-actions">
+          <a href="https://wa.me/22960000002?text=Bonjour%20Papa%20Dossou" target="_blank" class="artisan-wa">
+            💬 WhatsApp
+          </a>
+          <a href="#" class="artisan-more" title="Voir le profil">→</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="artisan-card reveal" data-category="tissage">
+      <div class="artisan-photo">
+        <img src="c.jpg" alt="Mama Yéwa, tisseuse">
+        <span class="artisan-specialty">Tissage</span>
+      </div>
+      <div class="artisan-body">
+        <h3>Mama Yéwa</h3>
+        <div class="artisan-location">📍 Sè-Ahouandjigo</div>
+        <p>
+          Tisseuse de pagne traditionnel et créatrice de motifs inspirés du
+          patrimoine culturel de la région du Mono.
+        </p>
+        <div class="artisan-actions">
+          <a href="https://wa.me/22960000003?text=Bonjour%20Mama%20Yéwa" target="_blank" class="artisan-wa">
+            💬 WhatsApp
+          </a>
+          <a href="#" class="artisan-more" title="Voir le profil">→</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="artisan-card reveal" data-category="sculpture">
+      <div class="artisan-photo">
+        <img src="d.jpg" alt="Jean-Baptiste, sculpteur">
+        <span class="artisan-specialty">Sculpture</span>
+      </div>
+      <div class="artisan-body">
+        <h3>Jean-Baptiste</h3>
+        <div class="artisan-location">📍 Sè-Tohou</div>
+        <p>
+          Sculpteur sur bois et argile. Réalise masques, statuettes et objets
+          d'art inspirés des traditions vodoun.
+        </p>
+        <div class="artisan-actions">
+          <a href="https://wa.me/22960000004?text=Bonjour%20Jean-Baptiste" target="_blank" class="artisan-wa">
+            💬 WhatsApp
+          </a>
+          <a href="#" class="artisan-more" title="Voir le profil">→</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="artisan-card reveal" data-category="bijoux">
+      <div class="artisan-photo">
+        <img src="a.jpg" alt="Mama Sika, bijoutière">
+        <span class="artisan-specialty">Bijoux</span>
+      </div>
+      <div class="artisan-body">
+        <h3>Mama Sika</h3>
+        <div class="artisan-location">📍 Sè Centre</div>
+        <p>
+          Créatrice de bijoux artisanaux en perles de terre cuite, laiton et
+          bronze. Collections uniques et personnalisables.
+        </p>
+        <div class="artisan-actions">
+          <a href="https://wa.me/22960000005?text=Bonjour%20Mama%20Sika" target="_blank" class="artisan-wa">
+            💬 WhatsApp
+          </a>
+          <a href="#" class="artisan-more" title="Voir le profil">→</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="artisan-card reveal" data-category="cuisine">
+      <div class="artisan-photo">
+        <img src="b.jpg" alt="Mama Akossiwa, cuisinière">
+        <span class="artisan-specialty">Cuisine locale</span>
+      </div>
+      <div class="artisan-body">
+        <h3>Mama Akossiwa</h3>
+        <div class="artisan-location">📍 Sè-Centre</div>
+        <p>
+          Spécialiste de la cuisine béninoise traditionnelle. Transforme et
+          commercialise les produits du terroir de Sè.
+        </p>
+        <div class="artisan-actions">
+          <a href="https://wa.me/22960000006?text=Bonjour%20Mama%20Akossiwa" target="_blank" class="artisan-wa">
+            💬 WhatsApp
+          </a>
+          <a href="#" class="artisan-more" title="Voir le profil">→</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="artisan-card reveal" data-category="poterie">
+      <div class="artisan-photo">
+        <img src="c.jpg" alt="Atelier familial Todjinou">
+        <span class="artisan-specialty">Poterie</span>
+      </div>
+      <div class="artisan-body">
+        <h3>Atelier Todjinou</h3>
+        <div class="artisan-location">📍 Sè-Daho</div>
+        <p>
+          Atelier familial transmis depuis 4 générations. Spécialiste des
+          grandes jarres de conservation et objets rituels.
+        </p>
+        <div class="artisan-actions">
+          <a href="https://wa.me/22960000007?text=Bonjour%20Atelier%20Todjinou" target="_blank" class="artisan-wa">
+            💬 WhatsApp
+          </a>
+          <a href="#" class="artisan-more" title="Voir le profil">→</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="artisan-card reveal" data-category="tissage">
+      <div class="artisan-photo">
+        <img src="d.jpg" alt="Coopérative des tisserandes de Sè">
+        <span class="artisan-specialty">Tissage</span>
+      </div>
+      <div class="artisan-body">
+        <h3>Coopérative Tisserandes</h3>
+        <div class="artisan-location">📍 Sè-Centre</div>
+        <p>
+          Coopérative de 12 femmes spécialisées dans le tissage traditionnel,
+          la teinture naturelle et la création textile.
+        </p>
+        <div class="artisan-actions">
+          <a href="https://wa.me/22960000008?text=Bonjour%20Coopérative" target="_blank" class="artisan-wa">
+            💬 WhatsApp
+          </a>
+          <a href="#" class="artisan-more" title="Voir le profil">→</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="artisan-card reveal" data-category="sculpture">
+      <div class="artisan-photo">
+        <img src="a.jpg" alt="Mama Claire, sculptrice">
+        <span class="artisan-specialty">Sculpture</span>
+      </div>
+      <div class="artisan-body">
+        <h3>Mama Claire</h3>
+        <div class="artisan-location">📍 Sè-Zoungbo</div>
+        <p>
+          Sculptrice sur argile et bois. Créatrice de pièces d'art
+          contemporaines inspirées du patrimoine béninois.
+        </p>
+        <div class="artisan-actions">
+          <a href="https://wa.me/22960000009?text=Bonjour%20Mama%20Claire" target="_blank" class="artisan-wa">
+            💬 WhatsApp
+          </a>
+          <a href="#" class="artisan-more" title="Voir le profil">→</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     POTERIE / SAVOIR-FAIRE
+============================================================ -->
+<section class="pottery" id="poterie">
+  <div class="section-head reveal">
+    <div class="section-label">Savoir-faire ancestral</div>
+    <h2 class="section-title">L'art de la <span class="accent">poterie</span> de Sè</h2>
+    <p class="section-sub">
+      De la terre brute à l'objet fini, découvrez les 4 étapes d'un savoir-faire
+      millénaire transmis avec passion de mère en fille.
+    </p>
+  </div>
+
+  <div class="pottery-steps">
+    <div class="step-card reveal">
+      <div class="step-num">01</div>
+      <div class="step-icon">⛏️</div>
+      <h3>Extraction de l'argile</h3>
+      <p>
+        L'argile est extraite dans des carrières locales, puis nettoyée et
+        préparée pour être modelée.
+      </p>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">02</div>
+      <div class="step-icon">🤲</div>
+      <h3>Modelage à la main</h3>
+      <p>
+        Le façonnage est réalisé par les mains expertes des potières, sans tour,
+        selon la technique ancestrale.
+      </p>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">03</div>
+      <div class="step-icon">🎨</div>
+      <h3>Décoration & séchage</h3>
+      <p>
+        Chaque pièce est décorée avec des motifs traditionnels puis laissée à
+        sécher naturellement au soleil.
+      </p>
+    </div>
+    <div class="step-card reveal">
+      <div class="step-num">04</div>
+      <div class="step-icon">🔥</div>
+      <h3>Cuisson traditionnelle</h3>
+      <p>
+        La cuisson se fait à ciel ouvert, donnant aux poteries leur couleur
+        rouge typique et leur solidité.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUITS LOCAUX
+============================================================ -->
+<section class="products" id="produits">
+  <div class="section-head reveal">
+    <div class="section-label">Nos produits</div>
+    <h2 class="section-title">Les <span class="accent">trésors</span> du terroir de Sè</h2>
+    <p class="section-sub">
+      Poteries, produits agricoles transformés, artisanat et créations locales
+      — découvrez tout ce que Sè a à offrir.
+    </p>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card reveal">
+      <div class="product-icon">🏺</div>
+      <h3>Poteries & Canaris</h3>
+      <p>Jarres, canaris, marmites et objets décoratifs en argile naturelle.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">🧵</div>
+      <h3>Pagnes & Tissus</h3>
+      <p>Tissus traditionnels teints et tissés selon des techniques ancestrales.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">🪵</div>
+      <h3>Sculptures</h3>
+      <p>Masques, statuettes et objets d'art taillés à la main dans le bois.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">💎</div>
+      <h3>Bijoux artisanaux</h3>
+      <p>Perles, colliers, bracelets et parures uniques en terre cuite et laiton.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">🌾</div>
+      <h3>Produits agricoles</h3>
+      <p>Maïs, manioc, arachide, huile de palme et produits transformés.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">🍯</div>
+      <h3>Cuisine locale</h3>
+      <p>Spécialités culinaires béninoises préparées par nos artisans.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">🎁</div>
+      <h3>Souvenirs</h3>
+      <p>Objets souvenirs et cadeaux portant l'identité de la Cité Potière.</p>
+    </div>
+    <div class="product-card reveal">
+      <div class="product-icon">👕</div>
+      <h3>Collection SÈ</h3>
+      <p>T-shirts, polos, casquettes et accessoires de la marque ICI C'EST SÈ.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LIEUX À DÉCOUVRIR
+============================================================ -->
+<section class="places" id="lieux">
+  <div class="section-head reveal">
+    <div class="section-label">Tourisme</div>
+    <h2 class="section-title">Lieux à <span class="accent">découvrir</span> à Sè</h2>
+    <p class="section-sub">
+      Un patrimoine naturel, culturel et historique à explorer. Préparez votre
+      visite de la Cité Potière et laissez-vous surprendre.
+    </p>
+  </div>
+
+  <div class="places-grid">
+    <article class="place-card reveal">
+      <div class="place-img">
+        <img src="a.jpg" alt="Atelier des potières de Sè">
+      </div>
+      <div class="place-body">
+        <span class="place-category">Artisanat</span>
+        <h3>Atelier des potières</h3>
+        <p>
+          Assistez à la fabrication des poteries en direct et découvrez les
+          techniques ancestrales transmises depuis des générations.
+        </p>
+        <span class="place-link">Visiter</span>
+      </div>
+    </article>
+
+    <article class="place-card reveal">
+      <div class="place-img">
+        <img src="c.jpg" alt="Site historique de Sè">
+      </div>
+      <div class="place-body">
+        <span class="place-category">Patrimoine</span>
+        <h3>Site historique</h3>
+        <p>
+          Lieu de mémoire et d'histoire, témoin du passé riche et de l'identité
+          culturelle profonde de Sè et de la région du Mono.
+        </p>
+        <span class="place-link">Découvrir</span>
+      </div>
+    </article>
+
+    <article class="place-card reveal">
+      <div class="place-img">
+        <img src="d.jpg" alt="Marché traditionnel de Sè">
+      </div>
+      <div class="place-body">
+        <span class="place-category">Commerce</span>
+        <h3>Marché traditionnel</h3>
+        <p>
+          Couleurs, saveurs et vie locale au cœur du marché de Sè, entre
+          produits frais, artisanat et rencontres chaleureuses.
+        </p>
+        <span class="place-link">Explorer</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     ÉVÉNEMENTS
+============================================================ -->
+<section class="events" id="evenements">
+  <div class="section-head reveal">
+    <div class="section-label">Agenda</div>
+    <h2 class="section-title">Événements <span class="accent">à venir</span></h2>
+    <p class="section-sub">
+      Festivals, foires artisanales, journées culturelles et rencontres
+      communautaires — ne manquez rien de la vie de Sè.
+    </p>
+  </div>
+
+  <div class="events-list">
+    <div class="event-item reveal">
+      <div class="event-date">
+        <div class="e-day">15</div>
+        <div class="e-month">Mars</div>
+      </div>
+      <div class="event-content">
+        <h3>Fête des Potières de Sè</h3>
+        <p>
+          Célébration annuelle du savoir-faire potier avec expositions,
+          démonstrations et vente de créations artisanales.
+        </p>
+        <div class="event-meta">
+          <span>📍 Sè Centre</span>
+          <span>🕐 9h - 18h</span>
+          <span>🎫 Entrée libre</span>
+        </div>
+      </div>
+      <button class="event-cta">S'inscrire</button>
+    </div>
+
+    <div class="event-item reveal">
+      <div class="event-date">
+        <div class="e-day">22</div>
+        <div class="e-month">Avril</div>
+      </div>
+      <div class="event-content">
+        <h3>Foire artisanale du Mono</h3>
+        <p>
+          Rencontre régionale des artisans du département du Mono. Expositions,
+          démonstrations et networking professionnel.
+        </p>
+        <div class="event-meta">
+          <span>📍 Houéyogbé</span>
+          <span>🕐 10h - 20h</span>
+          <span>🎫 Gratuit</span>
+        </div>
+      </div>
+      <button class="event-cta">S'inscrire</button>
+    </div>
+
+    <div class="event-item reveal">
+      <div class="event-date">
+        <div class="e-day">08</div>
+        <div class="e-month">Mai</div>
+      </div>
+      <div class="event-content">
+        <h3>Journée Culturelle de Sè</h3>
+        <p>
+          Hommage aux traditions, danses, musiques et contes du patrimoine
+          culturel de la Cité Potière.
+        </p>
+        <div class="event-meta">
+          <span>📍 Sè-Tohou</span>
+          <span>🕐 Toute la journée</span>
+          <span>🎫 Gratuit</span>
+        </div>
+      </div>
+      <button class="event-cta">S'inscrire</button>
+    </div>
+
+    <div class="event-item reveal">
+      <div class="event-date">
+        <div class="e-day">19</div>
+        <div class="e-month">Juin</div>
+      </div>
+      <div class="event-content">
+        <h3>Atelier Initiation Poterie</h3>
+        <p>
+          Atelier pratique pour découvrir les techniques de base de la poterie
+          traditionnelle, animé par les maîtres potiers de Sè.
+        </p>
+        <div class="event-meta">
+          <span>📍 Sè Centre</span>
+          <span>🕐 14h - 17h</span>
+          <span>🎫 Sur inscription</span>
+        </div>
+      </div>
+      <button class="event-cta">S'inscrire</button>
+    </div>
+
+    <div class="event-item reveal">
+      <div class="event-date">
+        <div class="e-day">14</div>
+        <div class="e-month">Août</div>
+      </div>
+      <div class="event-content">
+        <h3>Festival des Arts et Traditions</h3>
+        <p>
+          Grand festival annuel réunissant artistes, artisans et communautés
+          du Mono autour du patrimoine culturel béninois.
+        </p>
+        <div class="event-meta">
+          <span>📍 Houéyogbé</span>
+          <span>🕐 3 jours</span>
+          <span>🎫 Payant</span>
+        </div>
+      </div>
+      <button class="event-cta">S'inscrire</button>
+    </div>
+
+    <div class="event-item reveal">
+      <div class="event-date">
+        <div class="e-day">25</div>
+        <div class="e-month">Déc</div>
+      </div>
+      <div class="event-content">
+        <h3>Marché de Noël Artisanal</h3>
+        <p>
+          Marché festif de fin d'année dédié aux produits artisanaux et
+          créations locales. Idéal pour les cadeaux de Noël.
+        </p>
+        <div class="event-meta">
+          <span>📍 Sè Centre</span>
+          <span>🕐 10h - 22h</span>
+          <span>🎫 Entrée libre</span>
+        </div>
+      </div>
+      <button class="event-cta">S'inscrire</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ACTUALITÉS
+============================================================ -->
+<section class="news" id="actualites">
+  <div class="section-head reveal">
+    <div class="section-label">Actualités</div>
+    <h2 class="section-title">Les <span class="accent">dernières</span> nouvelles de Sè</h2>
+    <p class="section-sub">
+      Suivez la vie de la Cité Potière : portraits, reportages, initiatives et
+      nouveautés de la marque ICI C'EST SÈ.
+    </p>
+  </div>
+
+  <div class="news-grid">
+    <article class="news-card featured reveal">
+      <div class="news-img">
+        <img src="d.jpg" alt="Lancement de la plateforme numérique">
+      </div>
+      <div class="news-body">
+        <span class="news-tag">À la une</span>
+        <h3>ICI C'EST SÈ lance sa plateforme numérique de valorisation du patrimoine</h3>
+        <p>
+          La marque ICI C'EST SÈ franchit une étape décisive avec le lancement
+          de sa plateforme numérique dédiée à la promotion de Sè, de ses artisans,
+          de sa culture et de son tourisme. Une vitrine pensée pour le Bénin et
+          l'Afrique de l'Ouest.
+        </p>
+        <div class="news-date">Publié le 12 octobre 2026</div>
+      </div>
+    </article>
+
+    <article class="news-card reveal">
+      <div class="news-img">
+        <img src="b.jpg" alt="Portrait Mama Adjovi">
+      </div>
+      <div class="news-body">
+        <span class="news-tag">Artisanat</span>
+        <h3>Portrait : Mama Adjovi, gardienne du savoir-faire potier</h3>
+        <p>
+          Rencontre avec l'une des figures emblématiques de la poterie de Sè
+          et transmission d'un héritage familial.
+        </p>
+        <div class="news-date">10 octobre 2026</div>
+      </div>
+    </article>
+
+    <article class="news-card reveal">
+      <div class="news-img">
+        <img src="c.jpg" alt="3 raisons de visiter Sè">
+      </div>
+      <div class="news-body">
+        <span class="news-tag">Tourisme</span>
+        <h3>3 raisons de visiter Sè cette année</h3>
+        <p>
+          Patrimoine, art, gastronomie : découvrez pourquoi Sè mérite le détour
+          lors de votre prochain voyage au Bénin.
+        </p>
+        <div class="news-date">5 octobre 2026</div>
+      </div>
+    </article>
+
+    <article class="news-card reveal">
+      <div class="news-img">
+        <img src="a.jpg" alt="Coopérative des tisserandes">
+      </div>
+      <div class="news-body">
+        <span class="news-tag">Communauté</span>
+        <h3>La coopérative des tisserandes de Sè double sa production</h3>
+        <p>
+          Grâce à un nouveau partenariat, la coopérative de 12 femmes augmente
+          sa capacité de production et exporte désormais au-delà du Bénin.
+        </p>
+        <div class="news-date">28 septembre 2026</div>
+      </div>
+    </article>
+
+    <article class="news-card reveal">
+      <div class="news-img">
+        <img src="d.jpg" alt="Atelier initiation poterie">
+      </div>
+      <div class="news-body">
+        <span class="news-tag">Formation</span>
+        <h3>Nouvel atelier d'initiation à la poterie pour les jeunes</h3>
+        <p>
+          La marque ICI C'EST SÈ lance un programme d'initiation gratuit pour
+          les jeunes de la commune de Houéyogbé.
+        </p>
+        <div class="news-date">20 septembre 2026</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIE PHOTOS/VIDÉOS
+============================================================ -->
+<section class="gallery" id="galerie">
+  <div class="section-head reveal">
+    <div class="section-label">Médiathèque</div>
+    <h2 class="section-title">Galerie <span class="accent">photos & vidéos</span></h2>
+    <p class="section-sub">
+      Plongez dans l'univers visuel de Sè : artisanat, paysages, événements et
+      vie communautaire.
+    </p>
+  </div>
+
+  <div class="gallery-tabs reveal">
+    <button class="gallery-tab active" data-tab="all">Tout</button>
+    <button class="gallery-tab" data-tab="photo">Photos</button>
+    <button class="gallery-tab" data-tab="video">Vidéos</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-item reveal" data-type="photo">
+      <img src="a.jpg" alt="Poterie artisanale">
+      <div class="g-info">
+        <div class="g-cat">Artisanat</div>
+        <div class="g-title">Poterie traditionnelle</div>
+      </div>
+    </div>
+    <div class="gallery-item reveal" data-type="photo">
+      <img src="b.jpg" alt="Artisans au travail">
+      <div class="g-info">
+        <div class="g-cat">Portrait</div>
+        <div class="g-title">Artisans en action</div>
+      </div>
+    </div>
+    <div class="gallery-item video reveal" data-type="video">
+      <img src="c.jpg" alt="Reportage vidéo">
+      <div class="video-play">▶</div>
+      <div class="g-info">
+        <div class="g-cat">Vidéo</div>
+        <div class="g-title">Reportage : la Cité Potière</div>
+      </div>
+    </div>
+    <div class="gallery-item reveal" data-type="photo">
+      <img src="d.jpg" alt="Événement culturel">
+      <div class="g-info">
+        <div class="g-cat">Culture</div>
+        <div class="g-title">Événement communautaire</div>
+      </div>
+    </div>
+    <div class="gallery-item video reveal" data-type="video">
+      <img src="a.jpg" alt="Portrait vidéo d'artisan">
+      <div class="video-play">▶</div>
+      <div class="g-info">
+        <div class="g-cat">Vidéo</div>
+        <div class="g-title">Portrait d'artisan</div>
+      </div>
+    </div>
+    <div class="gallery-item reveal" data-type="photo">
+      <img src="b.jpg" alt="Patrimoine de Sè">
+      <div class="g-info">
+        <div class="g-cat">Patrimoine</div>
+        <div class="g-title">Lieux historiques</div>
+      </div>
+    </div>
+    <div class="gallery-item reveal" data-type="photo">
+      <img src="c.jpg" alt="Produits locaux de Sè">
+      <div class="g-info">
+        <div class="g-cat">Produits</div>
+        <div class="g-title">Trésors du terroir</div>
+      </div>
+    </div>
+    <div class="gallery-item video reveal" data-type="video">
+      <img src="d.jpg" alt="Festival de Sè">
+      <div class="video-play">▶</div>
+      <div class="g-info">
+        <div class="g-cat">Vidéo</div>
+        <div class="g-title">Festival de Sè</div>
+      </div>
+    </div>
+    <div class="gallery-item reveal" data-type="photo">
+      <img src="a.jpg" alt="Atelier de poterie">
+      <div class="g-info">
+        <div class="g-cat">Atelier</div>
+        <div class="g-title">Dans l'atelier</div>
+      </div>
+    </div>
+    <div class="gallery-item reveal" data-type="photo">
+      <img src="b.jpg" alt="Détail de poterie">
+      <div class="g-info">
+        <div class="g-cat">Détail</div>
+        <div class="g-title">Motifs traditionnels</div>
+      </div>
+    </div>
+    <div class="gallery-item video reveal" data-type="video">
+      <img src="c.jpg" alt="Cérémonie traditionnelle">
+      <div class="video-play">▶</div>
+      <div class="g-info">
+        <div class="g-cat">Vidéo</div>
+        <div class="g-title">Cérémonie traditionnelle</div>
+      </div>
+    </div>
+    <div class="gallery-item reveal" data-type="photo">
+      <img src="d.jpg" alt="Paysage de Sè">
+      <div class="g-info">
+        <div class="g-cat">Paysage</div>
+        <div class="g-title">Nature et territoire</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CITATION IMMERSIVE
+============================================================ -->
+<section class="quote-section">
+  <div class="quote-content reveal">
+    <div class="quote-mark">"</div>
+    <p class="quote-text">
+      Faire de l'identité de Sè une valeur économique et culturelle durable.
+    </p>
+    <div class="quote-author">— ICI C'EST SÈ · La Cité Potière</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MODÈLE ÉCONOMIQUE
+============================================================ -->
+<section class="economy">
+  <div class="section-head reveal">
+    <div class="section-label">Modèle économique</div>
+    <h2 class="section-title">Des sources de <span class="accent">revenus</span> diversifiées</h2>
+    <p class="section-sub">
+      Une stratégie multi-canal pour assurer la pérennité et la résilience de
+      la marque ICI C'EST SÈ.
+    </p>
+  </div>
+
+  <div class="economy-grid">
+    <div class="eco-card reveal">
+      <span class="eco-icon">📢</span>
+      <h3>Publicité & Sponsoring</h3>
+      <p>Entreprises et organisations paient pour promouvoir leurs produits sur les plateformes ICI C'EST SÈ.</p>
+    </div>
+    <div class="eco-card reveal">
+      <span class="eco-icon">🎬</span>
+      <h3>Contenus Sponsorisés</h3>
+      <p>Affiches, vidéos, gestion de pages, couverture d'événements et campagnes digitales ciblées.</p>
+    </div>
+    <div class="eco-card reveal">
+      <span class="eco-icon">👕</span>
+      <h3>Produits Dérivés</h3>
+      <p>T-shirts, polos, casquettes, sacs, souvenirs et objets personnalisés sous la marque.</p>
+    </div>
+    <div class="eco-card reveal">
+      <span class="eco-icon">🏺</span>
+      <h3>Commission Artisanat</h3>
+      <p>Commission sur la vente de produits artisanaux proposés via la plateforme numérique.</p>
+    </div>
+    <div class="eco-card reveal">
+      <span class="eco-icon">🎭</span>
+      <h3>Événementiel</h3>
+      <p>Organisation d'événements et prestations de communication événementielle.</p>
+    </div>
+    <div class="eco-card reveal">
+      <span class="eco-icon">🧭</span>
+      <h3>Circuits Touristiques</h3>
+      <p>Organisation et commercialisation de circuits et expériences à Sè et dans le Mono.</p>
+    </div>
+    <div class="eco-card reveal">
+      <span class="eco-icon">🤝</span>
+      <h3>Partenariats</h3>
+      <p>Collaborations commerciales avec entreprises, institutions, ONG, hôtels et collectivités.</p>
+    </div>
+    <div class="eco-card reveal">
+      <span class="eco-icon">🎓</span>
+      <h3>Formations</h3>
+      <p>Formations professionnelles en communication digitale, artisanat et entrepreneuriat.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PARTENAIRES & IMPACT
+============================================================ -->
+<section class="partners">
+  <div class="section-head reveal">
+    <div class="section-label">Ensemble, construisons</div>
+    <h2 class="section-title">Partenaires & <span class="accent">Impact</span></h2>
+    <p class="section-sub">
+      Un projet fédérateur qui mobilise tous les acteurs du territoire pour
+      un développement durable et inclusif.
+    </p>
+  </div>
+
+  <div class="partners-grid">
+    <div class="panel reveal-left reveal">
+      <h3><span class="p-icon">🤝</span> Partenaires recherchés</h3>
+      <ul>
+        <li>Mairie de Houéyogbé et acteurs locaux de Sè</li>
+        <li>Artisans, potiers et créateurs locaux</li>
+        <li>Entreprises privées, banques et institutions financières</li>
+        <li>Opérateurs télécoms, agences de voyage, hôtels et restaurants</li>
+        <li>ONG, structures culturelles, médias et influenceurs</li>
+        <li>Diaspora béninoise et africaine</li>
+      </ul>
+    </div>
+    <div class="panel reveal-right reveal">
+      <h3><span class="p-icon">🌍</span> Impact attendu</h3>
+      <ul>
+        <li>Améliorer la visibilité nationale et internationale de Sè</li>
+        <li>Augmenter la commercialisation des produits artisanaux</li>
+        <li>Créer des opportunités pour les jeunes de la commune</li>
+        <li>Stimuler le tourisme local et régional</li>
+        <li>Préserver et valoriser les savoir-faire des femmes et artisans</li>
+        <li>Favoriser l'entrepreneuriat et la création de revenus locaux</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT PREMIUM
+============================================================ -->
+<section class="contact" id="contact">
+  <div class="section-head reveal">
+    <div class="section-label">Contact</div>
+    <h2 class="section-title">Rejoignez <span class="accent">l'aventure</span></h2>
+    <p class="section-sub">
+      Artisan, partenaire, investisseur ou institution — contactez-nous pour
+      construire ensemble la vitrine numérique de Sè.
+    </p>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-card reveal-left reveal">
+      <h3><span class="c-icon">📞</span> Coordonnées</h3>
+      <div class="contact-item">
+        <span class="ci-icon">💬</span>
+        <div>
+          <div class="ci-label">WhatsApp Business</div>
+          <div class="ci-val">
+            <a href="https://wa.me/22960000000" target="_blank">+229 60 00 00 00</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="ci-icon">📘</span>
+        <div>
+          <div class="ci-label">Facebook</div>
+          <div class="ci-val">
+            <a href="https://www.facebook.com/profile.php?id=61592637939356" target="_blank">
+              ICI C'EST SÈ — La Cité Potière
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <span class="ci-icon">📍</span>
+        <div>
+          <div class="ci-label">Localisation</div>
+          <div class="ci-val">Sè · Commune de Houéyogbé · Département du Mono · Bénin</div>
+        </div>
+      </div>
+      <a href="https://wa.me/22960000000" target="_blank" class="wa-cta">
+        💬 Discuter sur WhatsApp
+      </a>
+    </div>
+
+    <div class="contact-card reveal-right reveal">
+      <h3><span class="c-icon">📱</span> Réseaux sociaux</h3>
+      <p style="color: var(--gris); margin-bottom: 20px; line-height: 1.7;">
+        Suivez la construction de la marque ICI C'EST SÈ et ne manquez aucun
+        reportage, portrait ou événement de la Cité Potière.
+      </p>
+      <div class="socials-row">
+        <a href="https://www.facebook.com/profile.php?id=61592637939356" target="_blank" title="Facebook">📘</a>
+        <a href="#" target="_blank" title="TikTok">🎵</a>
+        <a href="#" target="_blank" title="Instagram">📷</a>
+        <a href="#" target="_blank" title="YouTube">▶️</a>
+        <a href="https://wa.me/22960000000" target="_blank" title="WhatsApp">💬</a>
+      </div>
+      <div style="margin-top: 30px; padding-top: 22px; border-top: 1px solid rgba(212,175,55,0.15);">
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--or); font-weight: 700; margin-bottom: 10px;">
+          Disponibilité
+        </div>
+        <p style="color: var(--gris); font-size: 0.92rem; line-height: 1.7;">
+          Ouvert aux partenariats commerciaux, sponsors, institutions culturelles
+          et projets de valorisation territoriale. N'hésitez pas à nous contacter.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <img src="logo.jpg" alt="Logo ICI C'EST SÈ">
+      <h3>ICI C'EST SÈ</h3>
+      <div class="tagline">La Cité Potière</div>
+      <p>
+        Plateforme numérique de valorisation du patrimoine culturel, artisanal
+        et touristique de Sè, commune de Houéyogbé, Bénin.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Découvrir</h4>
+      <ul>
+        <li><a href="#histoire">Notre histoire</a></li>
+        <li><a href="#artisans">Annuaire artisans</a></li>
+        <li><a href="#poterie">Savoir-faire</a></li>
+        <li><a href="#produits">Produits locaux</a></li>
+        <li><a href="#lieux">Lieux à visiter</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Explorer</h4>
+      <ul>
+        <li><a href="#evenements">Événements</a></li>
+        <li><a href="#actualites">Actualités</a></li>
+        <li><a href="#galerie">Galerie</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Nous suivre</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/profile.php?id=61592637939356" target="_blank">Facebook</a></li>
+        <li><a href="#" target="_blank">TikTok</a></li>
+        <li><a href="#" target="_blank">Instagram</a></li>
+        <li><a href="#" target="_blank">YouTube</a></li>
+        <li><a href="https://wa.me/22960000000" target="_blank">WhatsApp Business</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 ICI C'EST SÈ — La Cité Potière. Tous droits réservés.</p>
+    <p>Conçu avec <span class="or">♥</span> pour la valorisation du patrimoine béninois.</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     BOUTON SCROLL TO TOP
+============================================================ -->
+<button class="scroll-top" id="scrollTop" aria-label="Retour en haut">↑</button>
+
+<script>
+/* ============================================================
+   ============================================================
+   ICI C'EST SÈ — LA CITÉ POTIÈRE
+   JavaScript complet
+   ============================================================
+============================================================ */
+
+/* ============================================================
+   1. CURSEUR PERSONNALISÉ
+============================================================ */
+(function initCursor() {
+  'use strict';
+
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+
+  if (!dot || !ring) return;
+  if (window.matchMedia('(max-width: 1024px)').matches) return;
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let ringX = 0;
+  let ringY = 0;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+  });
+
+  function animateRing() {
+    ringX += (mouseX - ringX) * 0.18;
+    ringY += (mouseY - ringY) * 0.18;
+    ring.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+    requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  const hoverSelector =
+    'a, button, .flip-card, .stat-card, .stat-block, .artisan-card, .place-card, ' +
+    '.event-item, .news-card, .gallery-item, .step-card, .product-card, ' +
+    '.filter-btn, .gallery-tab, .eco-card, .domain-card, .event-cta';
+
+  document.addEventListener('mouseover', (e) => {
+    if (e.target.closest(hoverSelector)) ring.classList.add('hovered');
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    if (e.target.closest(hoverSelector)) ring.classList.remove('hovered');
+  });
+
+  document.addEventListener('mousedown', () => ring.classList.add('clicked'));
+  document.addEventListener('mouseup', () => ring.classList.remove('clicked'));
+})();
+
+/* ============================================================
+   2. LOADER — PARTICULES DORÉES CANVAS
+============================================================ */
+(function initLoaderCanvas() {
+  'use strict';
+
+  const canvas = document.getElementById('loaderCanvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let W = 0;
+  let H = 0;
+  const particles = [];
+  const PARTICLE_COUNT = 90;
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 2 + 0.5,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      alpha: Math.random() * 0.7 + 0.2,
+      hue: 30 + Math.random() * 15
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    particles.forEach((p) => {
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0) p.x = W;
+      if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H;
+      if (p.y > H) p.y = 0;
+
+      const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 8);
+      gradient.addColorStop(0, `hsla(${p.hue}, 80%, 65%, ${p.alpha})`);
+      gradient.addColorStop(1, `hsla(${p.hue}, 80%, 50%, 0)`);
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r * 8, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.fillStyle = `hsla(${p.hue}, 90%, 70%, ${p.alpha})`;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ============================================================
+   3. FERMETURE DU LOADER
+============================================================ */
+(function initLoaderClose() {
+  document.body.style.overflow = 'hidden';
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loader = document.getElementById('loader');
+      if (loader) loader.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }, 2800);
+  });
+})();
+
+/* ============================================================
+   4. HERO — PARTICULES INTERACTIVES
+============================================================ */
+(function initHeroParticles() {
+  'use strict';
+
+  const canvas = document.getElementById('heroParticles');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let W = 0;
+  let H = 0;
+  const particles = [];
+  const PARTICLE_COUNT = 60;
+  const mouse = { x: -9999, y: -9999 };
+
+  function resize() {
+    W = canvas.width = canvas.offsetWidth;
+    H = canvas.height = canvas.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push({
+      x: Math.random() * W,
+      y: Math.random() * H,
+      r: Math.random() * 1.8 + 0.4,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      alpha: Math.random() * 0.5 + 0.15,
+      hue: 25 + Math.random() * 25
+    });
+  }
+
+  const hero = canvas.parentElement;
+
+  hero.addEventListener('mousemove', (e) => {
+    const rect = canvas.getBoundingClientRect();
+    mouse.x = e.clientX - rect.left;
+    mouse.y = e.clientY - rect.top;
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    mouse.x = -9999;
+    mouse.y = -9999;
+  });
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    particles.forEach((p) => {
+      const dx = p.x - mouse.x;
+      const dy = p.y - mouse.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < 120 && dist > 0) {
+        const force = (120 - dist) / 120;
+        p.x += (dx / dist) * force * 0.8;
+        p.y += (dy / dist) * force * 0.8;
+      }
+
+      p.x += p.vx;
+      p.y += p.vy;
+
+      if (p.x < 0) p.x = W;
+      if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H;
+      if (p.y > H) p.y = 0;
+
+      const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 6);
+      gradient.addColorStop(0, `hsla(${p.hue}, 75%, 60%, ${p.alpha})`);
+      gradient.addColorStop(1, `hsla(${p.hue}, 75%, 50%, 0)`);
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r * 6, 0, Math.PI * 2);
+      ctx.fill();
+    });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ============================================================
+   5. NAVBAR INTELLIGENTE
+============================================================ */
+(function initNavbar() {
+  'use strict';
+
+  const nav = document.getElementById('mainNav');
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  const allNavLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section[id]');
+  const progressBar = document.getElementById('scrollProgress');
+  const scrollTopBtn = document.getElementById('scrollTop');
+
+  let lastScroll = 0;
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+
+    // Fond flouté
+    if (y > 60) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+
+    // Cacher au scroll down, montrer au scroll up
+    if (y > lastScroll && y > 400) nav.classList.add('hidden-nav');
+    else nav.classList.remove('hidden-nav');
+    lastScroll = y;
+
+    // Barre de progression
+    if (progressBar) {
+      const total = document.body.scrollHeight - window.innerHeight;
+      progressBar.style.width = (y / total) * 100 + '%';
+    }
+
+    // Bouton scroll top
+    if (scrollTopBtn) {
+      if (y > 600) scrollTopBtn.classList.add('visible');
+      else scrollTopBtn.classList.remove('visible');
+    }
+
+    // Lien actif
+    let current = '';
+    sections.forEach((sec) => {
+      const top = sec.offsetTop - 200;
+      if (y >= top) current = sec.getAttribute('id');
+    });
+    allNavLinks.forEach((link) => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // Hamburger mobile
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach((link) => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+  }
+
+  // Scroll top
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+})();
+
+/* ============================================================
+   6. REVEAL AU SCROLL
+============================================================ */
+(function initReveal() {
+  'use strict';
+
+  const revealEls = document.querySelectorAll('.reveal');
+  if (!revealEls.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: '0px 0px -50px 0px'
+    }
+  );
+
+  revealEls.forEach((el) => observer.observe(el));
+})();
+
+/* ============================================================
+   7. COMPTEURS ANIMÉS
+============================================================ */
+(function initCounters() {
+  'use strict';
+
+  const counters = document.querySelectorAll('[data-target]');
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        animateCounter(el, target);
+        observer.unobserve(el);
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  counters.forEach((c) => observer.observe(c));
+
+  function animateCounter(el, target) {
+    const duration = 2000;
+    const start = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 4);
+      const value = Math.floor(eased * target);
+      el.textContent = value.toLocaleString('fr-FR');
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      } else {
+        el.textContent = target.toLocaleString('fr-FR');
+      }
+    }
+
+    requestAnimationFrame(tick);
+  }
+})();
+
+/* ============================================================
+   8. TILT 3D SUR CARTES
+============================================================ */
+(function initTilt() {
+  'use strict';
+
+  if (window.matchMedia('(max-width: 1024px)').matches) return;
+
+  const cards = document.querySelectorAll(
+    '[data-tilt], .artisan-card, .place-card, .news-card, .step-card, ' +
+    '.product-card, .eco-card, .domain-card, .stat-card'
+  );
+
+  cards.forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      const rotX = -y * 6;
+      const rotY = x * 6;
+
+      card.style.transform =
+        `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+})();
+
+/* ============================================================
+   9. PARALLAXE HERO (SOURIS + SCROLL)
+============================================================ */
+(function initParallax() {
+  'use strict';
+
+  const heroBg = document.getElementById('heroBg1');
+  const heroContent = document.getElementById('heroContent');
+  const heroVisual = document.getElementById('heroVisual');
+  const hero = document.querySelector('.hero');
+
+  if (!hero) return;
+
+  let mx = 0;
+  let my = 0;
+
+  if (!window.matchMedia('(max-width: 1024px)').matches) {
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      mx = (e.clientX - rect.left) / rect.width - 0.5;
+      my = (e.clientY - rect.top) / rect.height - 0.5;
+    });
+
+    function loop() {
+      if (heroContent) {
+        heroContent.style.transform =
+          `translate3d(${mx * 12}px, ${my * 12}px, 0)`;
+      }
+      if (heroVisual) {
+        heroVisual.style.transform =
+          `translate3d(${mx * -25}px, ${my * -25}px, 0)`;
+      }
+      requestAnimationFrame(loop);
+    }
+    loop();
+  }
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < window.innerHeight && heroBg) {
+      heroBg.style.transform =
+        `scale(1.08) translateY(${window.scrollY * 0.35}px)`;
+    }
+  });
+})();
+
+/* ============================================================
+   10. FILTRE ARTISANS
+============================================================ */
+(function initArtisanFilter() {
+  'use strict';
+
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.artisan-card');
+
+  if (!btns.length || !cards.length) return;
+
+  btns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btns.forEach((b) => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      cards.forEach((card) => {
+        const match = filter === 'all' || card.getAttribute('data-category') === filter;
+
+        if (match) {
+          card.style.display = '';
+          card.classList.remove('visible');
+          setTimeout(() => card.classList.add('visible'), 30);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+
+/* ============================================================
+   11. FILTRE GALERIE
+============================================================ */
+(function initGalleryFilter() {
+  'use strict';
+
+  const tabs = document.querySelectorAll('.gallery-tab');
+  const items = document.querySelectorAll('.gallery-item');
+
+  if (!tabs.length || !items.length) return;
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filter = tab.getAttribute('data-tab');
+
+      items.forEach((item) => {
+        const match = filter === 'all' || item.getAttribute('data-type') === filter;
+
+        if (match) {
+          item.style.display = '';
+          item.classList.remove('visible');
+          setTimeout(() => item.classList.add('visible'), 30);
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+})();
+
+/* ============================================================
+   12. BOUTONS ÉVÉNEMENTS
+============================================================ */
+(function initEventButtons() {
+  'use strict';
+
+  document.querySelectorAll('.event-cta').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const original = btn.textContent;
+
+      btn.textContent = '✓ Inscrit !';
+      btn.style.background = 'var(--or)';
+      btn.style.color = 'var(--terre-profonde)';
+
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.style.color = '';
+      }, 2200);
+    });
+  });
+})();
+
+/* ============================================================
+   13. SMOOTH SCROLL ANCRES
+============================================================ */
+(function initSmoothScroll() {
+  'use strict';
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href === '#' || href === '') return;
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      e.preventDefault();
+
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
+
+      window.scrollTo({
+        top,
+        behavior: 'smooth'
+      });
+    });
+  });
+})();
+
+/* ============================================================
+   14. ANIMATION DES BOUTONS FLIP (mobile — tap)
+============================================================ */
+(function initFlipMobile() {
+  'use strict';
+
+  if (!window.matchMedia('(max-width: 1024px)').matches) return;
+
+  document.querySelectorAll('.flip-card').forEach((card) => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  });
+})();
+
+/* ============================================================
+   15. LOG DE BIENVENUE
+============================================================ */
+(function initLog() {
+  const title = '%c🏺 ICI C\'EST SÈ — La Cité Potière';
+  const subtitle = '%cTerre d\'héritage, fière de sa tradition, tournée vers le développement.';
+
+  console.log(
+    title,
+    'color:#d4af37;font-size:16px;font-weight:bold;text-shadow:0 0 10px rgba(212,175,55,0.5);'
+  );
+  console.log(
+    subtitle,
+    'color:#b85c38;font-size:12px;font-style:italic;'
+  );
+  console.log(
+    '%c📍 Sè · Commune de Houéyogbé · Département du Mono · Bénin',
+    'color:#a8998a;font-size:11px;'
+  );
+})();
+
+/* ============================================================
+   16. GESTION DE LA VISIBILITÉ DE L'ONGLET
+============================================================ */
+(function initVisibility() {
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      document.body.style.setProperty('--animation-state', 'paused');
+    } else {
+      document.body.style.setProperty('--animation-state', 'running');
+    }
+  });
+})();
+
+/* ============================================================
+   17. PRÉCHARGEMENT DES IMAGES
+============================================================ */
+(function initImagePreload() {
+  const images = ['logo.jpg', 'a.jpg', 'b.jpg', 'c.jpg', 'd.jpg'];
+
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+})();
+
+/* ============================================================
+   18. GESTION DU DÉFILEMENT FLUIDE
+============================================================ */
+(function initScrollBehavior() {
+  let scrollTimeout;
+
+  window.addEventListener('scroll', () => {
+    document.documentElement.classList.add('scrolling');
+
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      document.documentElement.classList.remove('scrolling');
+    }, 150);
+  }, { passive: true });
+})();
+
+/* ============================================================
+   19. AJOUT D'UNE CLASSE SUR LE BODY APRÈS CHARGEMENT
+============================================================ */
+(function initBodyLoaded() {
+  window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+  });
+})();
+
+/* ============================================================
+   20. OBSERVER DE PERFORMANCE
+============================================================ */
+(function initPerfObserver() {
+  if (!('PerformanceObserver' in window)) return;
+
+  try {
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.duration > 50) {
+          // console.warn('Long task detected:', entry);
+        }
+      });
+    });
+    observer.observe({ entryTypes: ['longtask'] });
+  } catch (e) {
+    // Silencieux
+  }
+})();
+</script>
+</body>
+</html>
